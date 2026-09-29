@@ -30,6 +30,12 @@
       "type": "csv"
     }
   },
+  "transform": [
+    {
+      "calculate": "datum.condition_or_circumstance == 'Sick' ? 'General sickness' : datum.condition_or_circumstance == 'Wasted condition' ? 'Severely underweight' : datum.condition_or_circumstance == 'Cystitis' ? 'Bladder inflammation' : datum.condition_or_circumstance == 'Conjunctivitis' ? 'Eye inflammation' : datum.condition_or_circumstance == 'Recorded dead' ? 'Found dead' : datum.condition_or_circumstance == 'Dog involvement' ? 'Dog attack or interaction' : datum.condition_or_circumstance",
+      "as": "plain_label"
+    }
+  ],
   "mark": {
     "type": "bar",
     "cornerRadiusEnd": 4,
@@ -37,7 +43,7 @@
   },
   "encoding": {
     "y": {
-      "field": "condition_or_circumstance",
+      "field": "plain_label",
       "type": "nominal",
       "sort": "-x",
       "title": null
@@ -45,15 +51,15 @@
     "x": {
       "field": "flagged_record_count",
       "type": "quantitative",
-      "title": "Flagged records",
+      "title": "Number of records",
       "axis": {
         "format": "~s"
       }
     },
     "tooltip": [
       {
-        "field": "condition_or_circumstance",
-        "title": "Flag"
+        "field": "plain_label",
+        "title": "Recorded reason or condition"
       },
       {
         "field": "flagged_record_count",

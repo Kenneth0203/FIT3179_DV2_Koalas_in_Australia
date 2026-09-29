@@ -30,6 +30,11 @@
       "type": "csv"
     }
   },
+  "transform": [
+    {
+      "filter": "datum.record_count >= 1000"
+    }
+  ],
   "mark": {
     "type": "arc",
     "innerRadius": 70,
@@ -54,7 +59,7 @@
     "tooltip": [
       {
         "field": "adult_fate",
-        "title": "Recorded fate"
+        "title": "What happened next"
       },
       {
         "field": "record_count",
