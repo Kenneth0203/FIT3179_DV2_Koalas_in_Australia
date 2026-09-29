@@ -62,7 +62,9 @@
       "sort": "-x",
       "title": null,
       "axis": {
-        "labelLimit": 260
+        "labelLimit": 760,
+        "labelFontSize": 11,
+        "labelPadding": 8
       }
     },
     "x": {
