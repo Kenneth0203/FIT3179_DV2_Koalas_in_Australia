@@ -49,6 +49,10 @@
   "transform": [
     {
       "filter": "programme == null || datum.programme_category == programme"
+    },
+    {
+      "calculate": "datum.project_title == 'Koala Habitat Restoration and Protection in the Southern Highlands and Southern Tablelands Area of Regional Koala Significance (ARKS), NSW' ? 'Koala Habitat Restoration and Protection in the Southern Highlands|and Southern Tablelands Area of Regional Koala Significance (ARKS), NSW' : replace(replace(replace(replace(datum.project_title, ' in the Clarke-Connors Range', '|in the Clarke-Connors Range'), ' in the Coffs Harbour', '|in the Coffs Harbour'), ' Upgrade and Operational Expansion', '|Upgrade and Operational Expansion'), ' through Treatment, Rehabilitation', ' through Treatment,|Rehabilitation')",
+      "as": "project_label"
     }
   ],
   "mark": {
@@ -57,13 +61,15 @@
   },
   "encoding": {
     "y": {
-      "field": "project_title",
+      "field": "project_label",
       "type": "nominal",
       "sort": "-x",
       "title": null,
       "axis": {
-        "labelLimit": 760,
+        "labelExpr": "split(datum.label, '|')",
+        "labelLimit": 470,
         "labelFontSize": 11,
+        "labelLineHeight": 14,
         "labelPadding": 8
       }
     },
