@@ -35,7 +35,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json",
+        "url": "data/maps/countries-50m.json",
         "format": {
           "type": "topojson",
           "feature": "countries"
@@ -52,12 +52,36 @@
       "data": {
         "url": "data/qld_hospital/qld_koala_hospital_release_flows.csv",
         "format": {
-          "type": "csv"
+          "type": "csv",
+          "parse": {
+            "record_count": "number",
+            "rescue_latitude": "number",
+            "rescue_longitude": "number",
+            "release_latitude": "number",
+            "release_longitude": "number"
+          }
         }
       },
       "transform": [
         {
           "filter": "datum.record_count >= 3 && (datum.rescue_latitude != datum.release_latitude || datum.rescue_longitude != datum.release_longitude)"
+        },
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "route_rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "record_count",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.route_rank <= 15"
         }
       ],
       "mark": {
@@ -99,6 +123,30 @@
             "type": "quantitative",
             "format": ",",
             "title": "Rescue\u2013release records"
+          },
+          {
+            "field": "rescue_latitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Rescue latitude"
+          },
+          {
+            "field": "rescue_longitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Rescue longitude"
+          },
+          {
+            "field": "release_latitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Release latitude"
+          },
+          {
+            "field": "release_longitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Release longitude"
           }
         ]
       }
@@ -107,12 +155,36 @@
       "data": {
         "url": "data/qld_hospital/qld_koala_hospital_release_flows.csv",
         "format": {
-          "type": "csv"
+          "type": "csv",
+          "parse": {
+            "record_count": "number",
+            "rescue_latitude": "number",
+            "rescue_longitude": "number",
+            "release_latitude": "number",
+            "release_longitude": "number"
+          }
         }
       },
       "transform": [
         {
           "filter": "datum.record_count >= 3 && (datum.rescue_latitude != datum.release_latitude || datum.rescue_longitude != datum.release_longitude)"
+        },
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "route_rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "record_count",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.route_rank <= 15"
         }
       ],
       "mark": {
@@ -136,6 +208,18 @@
             "type": "quantitative",
             "format": ",",
             "title": "Records on route"
+          },
+          {
+            "field": "release_latitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Release latitude"
+          },
+          {
+            "field": "release_longitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Release longitude"
           }
         ]
       }

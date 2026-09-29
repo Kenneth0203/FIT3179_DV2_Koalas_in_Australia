@@ -35,17 +35,12 @@
   "layer": [
     {
       "data": {
-        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json",
+        "url": "data/maps/countries-50m.json",
         "format": {
           "type": "topojson",
           "feature": "countries"
         }
       },
-      "transform": [
-        {
-          "filter": "datum.latitude <= -24 && datum.latitude >= -29.5"
-        }
-      ],
       "mark": {
         "type": "geoshape",
         "fill": "#e6eadf",
@@ -60,6 +55,11 @@
           "type": "csv"
         }
       },
+      "transform": [
+        {
+          "filter": "datum.latitude <= -24 && datum.latitude >= -29.5"
+        }
+      ],
       "mark": {
         "type": "square",
         "opacity": 0.78
@@ -103,11 +103,13 @@
           {
             "field": "latitude",
             "type": "quantitative",
+            "format": ".2f",
             "title": "Latitude"
           },
           {
             "field": "longitude",
             "type": "quantitative",
+            "format": ".2f",
             "title": "Longitude"
           },
           {

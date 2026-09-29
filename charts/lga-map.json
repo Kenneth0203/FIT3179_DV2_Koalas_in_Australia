@@ -35,7 +35,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json",
+        "url": "data/maps/countries-50m.json",
         "format": {
           "type": "topojson",
           "feature": "countries"
