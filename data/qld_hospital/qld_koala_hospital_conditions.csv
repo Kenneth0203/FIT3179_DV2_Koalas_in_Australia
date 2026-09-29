@@ -1,0 +1,12 @@
+﻿condition_or_circumstance,flagged_record_count,percent_of_all_records,source_url,retrieved_date,note
+Sick,22251,37.2,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Wasted condition,12630,21.12,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Cystitis,12070,20.18,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Injured,11862,19.83,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Vehicle hit,11333,18.95,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Conjunctivitis,8932,14.93,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Recorded dead,8294,13.87,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Dog involvement,3579,5.98,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Under threat,1455,2.43,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Orphaned,1160,1.94,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.
+Fall,364,0.61,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Flags can overlap; do not sum categories to obtain total records.

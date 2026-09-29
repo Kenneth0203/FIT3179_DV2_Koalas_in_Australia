@@ -1,0 +1,39 @@
+﻿koala_lga,record_count,records_with_valid_coordinates,mean_latitude,mean_longitude,source_url,retrieved_date,note
+Moreton Bay Regional Council,20648,19006,-27.251753,152.974796,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Redland City Council,13190,12775,-27.538413,153.24357,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Logan City Council,4950,4813,-27.684899,153.139495,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Gold Coast City Council,4492,4299,-28.016668,153.372978,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Brisbane City Council,4275,4146,-27.522321,153.101452,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Ipswich City Council,3172,3162,-27.673556,152.684978,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Somerset Regional Council,2277,1975,-27.277633,152.492107,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Not recorded,1793,864,-27.371771,152.894635,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Scenic Rim Regional Council,1103,1055,-27.960582,152.769233,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Toowoomba Regional Council,731,620,-27.440286,151.860173,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Gympie Regional Council,674,604,-26.25688,152.645957,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Sunshine Coast Regional Council,485,385,-26.68774,152.899788,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+South Burnett Regional Council,425,340,-26.478068,151.871889,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Lockyer Valley Regional Council,388,342,-27.50638,152.282301,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Noosa Shire Council,367,315,-26.384139,152.984277,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Fraser Coast Regional Council,331,289,-25.576288,152.677933,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Southern Downs Regional Council,182,140,-28.25946,152.013969,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Central Highlands Regional Council,104,103,-27.405035,152.932718,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Western Downs Regional Council,75,59,-27.119517,150.882204,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Isaac Regional Council,41,37,-21.893373,148.572513,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Mackay Regional Council,18,12,-21.566447,148.977185,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+North Burnett Regional Council,17,14,-25.543062,151.530685,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Maranoa Regional Council,15,4,-26.960582,149.777858,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Goondiwindi Regional Council,13,9,-28.315606,150.889842,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Whitsunday Regional Council,10,9,-24.532653,150.436435,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Rockhampton Regional Council,7,6,-25.358158,151.182378,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Bundaberg Regional Council,5,3,-25.014423,152.059448,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Cassowary Coast Regional Council,3,2,-24.303682,150.942686,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Livingstone Shire Council,3,3,-22.776452,149.796947,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Murweh Shire Council,3,0,,,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Charters Towers Regional Council,2,0,,,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Cherbourg Aboriginal Shire Council,2,2,-26.285523,151.949458,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Mount Isa City Council,2,2,-27.441623,152.935002,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Banana Shire Council,1,0,,,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Cairns Regional Council,1,1,-27.691182,152.833675,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Gladstone Regional Council,1,1,-24.351082,151.299199,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Townsville City Council,1,1,-27.272112,153.008402,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.
+Woorabinda Aboriginal Shire Council,1,1,-24.631811,149.118042,https://www.data.qld.gov.au/dataset/koala-hospital-data,2026-09-29,Mean coordinates summarise record locations and are not official LGA centroids.

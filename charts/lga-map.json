@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "background": "transparent",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null
+    }
+  },
+  "height": 470,
+  "projection": {
+    "type": "mercator",
+    "center": [
+      148,
+      -27
+    ],
+    "scale": 1200
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e6eadf",
+        "stroke": "#aab6a6",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "data": {
+        "url": "data/qld_hospital/qld_koala_hospital_lga.csv",
+        "format": {
+          "type": "csv"
+        }
+      },
+      "transform": [
+        {
+          "filter": "isValid(datum.mean_latitude) && datum.koala_lga != 'Not recorded'"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#326b50",
+        "opacity": 0.68,
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "mean_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "mean_latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "record_count",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              20,
+              1800
+            ]
+          },
+          "legend": {
+            "title": "Records"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "koala_lga",
+            "title": "LGA"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Records"
+          }
+        ]
+      }
+    }
+  ]
+}

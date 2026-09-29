@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "background": "transparent",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null
+    }
+  },
+  "height": 280,
+  "data": {
+    "url": "data/qld_hospital/qld_koala_hospital_annual.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year >= 1997 && datum.year < 2025"
+    },
+    {
+      "fold": [
+        "vehicle_hit_count",
+        "caused_by_dog_count",
+        "fall_count"
+      ],
+      "as": [
+        "cause",
+        "records"
+      ]
+    },
+    {
+      "calculate": "datum.cause == 'vehicle_hit_count' ? 'Vehicle hit' : datum.cause == 'caused_by_dog_count' ? 'Dog involvement' : 'Fall'",
+      "as": "cause_label"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 35
+    },
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {
+        "labelAngle": -45,
+        "labelOverlap": true
+      }
+    },
+    "y": {
+      "field": "records",
+      "type": "quantitative",
+      "title": "Flagged records",
+      "axis": {
+        "format": ","
+      }
+    },
+    "color": {
+      "field": "cause_label",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#326b50",
+          "#dc9a50",
+          "#8b6f65"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "title": "Year"
+      },
+      {
+        "field": "cause_label",
+        "title": "Cause"
+      },
+      {
+        "field": "records",
+        "type": "quantitative",
+        "format": ",",
+        "title": "Records"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "background": "transparent",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null
+    }
+  },
+  "height": 330,
+  "data": {
+    "url": "data/qld_hospital/qld_koala_hospital_conditions.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 4,
+    "color": "#326b50"
+  },
+  "encoding": {
+    "y": {
+      "field": "condition_or_circumstance",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "flagged_record_count",
+      "type": "quantitative",
+      "title": "Flagged records",
+      "axis": {
+        "format": "~s"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "condition_or_circumstance",
+        "title": "Flag"
+      },
+      {
+        "field": "flagged_record_count",
+        "type": "quantitative",
+        "format": ",",
+        "title": "Records"
+      },
+      {
+        "field": "percent_of_all_records",
+        "type": "quantitative",
+        "format": ".1f",
+        "title": "Percent of records"
+      }
+    ]
+  }
+}

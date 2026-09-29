@@ -1,0 +1,85 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "background": "transparent",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null
+    }
+  },
+  "height": 230,
+  "data": {
+    "url": "data/qld_hospital/qld_koala_hospital_annual.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year >= 1997 && datum.year < 2025"
+    },
+    {
+      "calculate": "datum.released_count / datum.record_count",
+      "as": "release_share"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "color": "#7f9473",
+    "cornerRadiusTopLeft": 2,
+    "cornerRadiusTopRight": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {
+        "labelAngle": -45,
+        "labelOverlap": true
+      }
+    },
+    "y": {
+      "field": "release_share",
+      "type": "quantitative",
+      "title": "Records with release date",
+      "axis": {
+        "format": ".0%"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "title": "Year"
+      },
+      {
+        "field": "released_count",
+        "type": "quantitative",
+        "format": ",",
+        "title": "Records with release date"
+      },
+      {
+        "field": "release_share",
+        "type": "quantitative",
+        "format": ".1%",
+        "title": "Share"
+      }
+    ]
+  }
+}
