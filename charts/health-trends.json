@@ -46,7 +46,7 @@
       ]
     },
     {
-      "calculate": "replace(datum.indicator, '_count', '')",
+      "calculate": "datum.indicator == 'conjunctivitis_count' ? 'Eye inflammation (conjunctivitis)' : datum.indicator == 'cystitis_count' ? 'Bladder inflammation (cystitis)' : 'Severely underweight (wasted)'",
       "as": "indicator_label"
     }
   ],
@@ -71,7 +71,7 @@
     "y": {
       "field": "records",
       "type": "quantitative",
-      "title": "Flagged records",
+      "title": "Number of records",
       "axis": {
         "format": ",d"
       }
@@ -94,7 +94,7 @@
       },
       {
         "field": "indicator_label",
-        "title": "Indicator"
+        "title": "Recorded condition"
       },
       {
         "field": "records",
