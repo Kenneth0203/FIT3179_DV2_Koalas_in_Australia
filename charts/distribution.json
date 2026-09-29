@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null
+    }
+  },
+  "background": "transparent",
+  "height": 160,
+  "data": {
+    "url": "src/koala_recovery_projects.csv?v=2",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "mark": {
+    "type": "circle",
+    "size": 170,
+    "opacity": 0.65,
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "y": {
+      "field": "programme_category",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelLimit": 180
+      }
+    },
+    "x": {
+      "field": "funding_aud_ex_gst",
+      "type": "quantitative",
+      "title": "Project allocation (AUD, excluding GST)",
+      "axis": {
+        "format": "~s",
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "programme_category",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Large habitat restoration",
+          "Health grants"
+        ],
+        "range": [
+          "#326b50",
+          "#dc9a50"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "project_title",
+        "title": "Project"
+      },
+      {
+        "field": "delivery_partner",
+        "title": "Partner"
+      },
+      {
+        "field": "funding_aud_ex_gst",
+        "type": "quantitative",
+        "format": "$,.0f",
+        "title": "Allocation"
+      },
+      {
+        "field": "programme_category",
+        "title": "Programme"
+      }
+    ]
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  }
+}

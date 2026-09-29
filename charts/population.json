@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    },
+    "legend": {
+      "orient": "bottom",
+      "title": null
+    }
+  },
+  "background": "transparent",
+  "height": 160,
+  "data": {
+    "url": "src/koala_population_estimates.csv?v=2",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.estimate_year == 2025 && datum.population_group != \"National\""
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "geographic_coverage",
+      "type": "nominal",
+      "title": null
+    },
+    "x": {
+      "field": "lower_estimate",
+      "type": "quantitative",
+      "title": "Estimated koalas",
+      "scale": {
+        "zero": true
+      },
+      "axis": {
+        "tickCount": 5
+      }
+    },
+    "x2": {
+      "field": "upper_estimate"
+    },
+    "tooltip": [
+      {
+        "field": "geographic_coverage",
+        "title": "Region"
+      },
+      {
+        "field": "lower_estimate",
+        "type": "quantitative",
+        "format": ",",
+        "title": "Lower estimate"
+      },
+      {
+        "field": "upper_estimate",
+        "type": "quantitative",
+        "format": ",",
+        "title": "Upper estimate"
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "size": 24,
+    "color": "#326b50",
+    "cornerRadius": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  }
+}
