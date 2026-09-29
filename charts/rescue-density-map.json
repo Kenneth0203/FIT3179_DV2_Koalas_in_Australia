@@ -27,10 +27,10 @@
   "projection": {
     "type": "mercator",
     "center": [
-      148,
-      -27
+      152,
+      -26.8
     ],
-    "scale": 1200
+    "scale": 4000
   },
   "layer": [
     {
@@ -41,6 +41,11 @@
           "feature": "countries"
         }
       },
+      "transform": [
+        {
+          "filter": "datum.latitude <= -24 && datum.latitude >= -29.5"
+        }
+      ],
       "mark": {
         "type": "geoshape",
         "fill": "#e6eadf",
@@ -75,11 +80,23 @@
           "field": "record_count",
           "type": "quantitative",
           "scale": {
-            "scheme": "yellowgreenblue",
-            "type": "sqrt"
+            "type": "threshold",
+            "domain": [
+              10,
+              50,
+              200,
+              1000
+            ],
+            "range": [
+              "#dcecc9",
+              "#9dcc9b",
+              "#5aa678",
+              "#2f7658",
+              "#123f31"
+            ]
           },
           "legend": {
-            "title": "Records per grid cell"
+            "title": "Hospital records in each cell"
           }
         },
         "tooltip": [
