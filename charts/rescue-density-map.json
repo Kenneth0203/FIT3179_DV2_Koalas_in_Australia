@@ -27,10 +27,10 @@
   "projection": {
     "type": "mercator",
     "center": [
-      152,
-      -26.8
+      152.6,
+      -27.1
     ],
-    "scale": 4000
+    "scale": 6500
   },
   "layer": [
     {
@@ -88,11 +88,11 @@
               1000
             ],
             "range": [
-              "#dcecc9",
-              "#9dcc9b",
-              "#5aa678",
-              "#2f7658",
-              "#123f31"
+              "#dbeafe",
+              "#93c5fd",
+              "#3b82f6",
+              "#1d4ed8",
+              "#172554"
             ]
           },
           "legend": {
@@ -119,6 +119,29 @@
             "title": "Records"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"name": "Sunshine Coast", "latitude": -26.65, "longitude": 153.07},
+          {"name": "Brisbane", "latitude": -27.47, "longitude": 153.03},
+          {"name": "Gold Coast", "latitude": -28.02, "longitude": 153.4},
+          {"name": "Toowoomba", "latitude": -27.56, "longitude": 151.95}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 7,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#243e31"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "name"}
       }
     }
   ]

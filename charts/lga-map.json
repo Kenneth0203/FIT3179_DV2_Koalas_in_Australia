@@ -27,10 +27,10 @@
   "projection": {
     "type": "mercator",
     "center": [
-      148,
-      -27
+      152.6,
+      -27.1
     ],
-    "scale": 1200
+    "scale": 6500
   },
   "layer": [
     {
@@ -58,12 +58,29 @@
       "transform": [
         {
           "filter": "isValid(datum.mean_latitude) && datum.koala_lga != 'Not recorded'"
+        },
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "council_rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "record_count",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.council_rank <= 12"
         }
       ],
       "mark": {
         "type": "circle",
-        "color": "#326b50",
-        "opacity": 0.68,
+        "color": "#1769aa",
+        "opacity": 0.78,
         "stroke": "white",
         "strokeWidth": 0.8
       },
@@ -86,21 +103,56 @@
             ]
           },
           "legend": {
-            "title": "Records"
+            "title": "Hospital reports"
           }
         },
         "tooltip": [
           {
             "field": "koala_lga",
-            "title": "LGA"
+            "title": "Council area"
           },
           {
             "field": "record_count",
             "type": "quantitative",
             "format": ",",
-            "title": "Records"
+            "title": "Hospital reports"
+          },
+          {
+            "field": "mean_latitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Latitude"
+          },
+          {
+            "field": "mean_longitude",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Longitude"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"name": "Sunshine Coast", "latitude": -26.65, "longitude": 153.07},
+          {"name": "Brisbane", "latitude": -27.47, "longitude": 153.03},
+          {"name": "Gold Coast", "latitude": -28.02, "longitude": 153.4},
+          {"name": "Toowoomba", "latitude": -27.56, "longitude": 151.95}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 7,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#243e31"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "name"}
       }
     }
   ]

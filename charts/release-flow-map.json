@@ -27,8 +27,8 @@
   "projection": {
     "type": "mercator",
     "center": [
-      152.3,
-      -27
+      152.6,
+      -27.1
     ],
     "scale": 6500
   },
@@ -86,8 +86,8 @@
       ],
       "mark": {
         "type": "rule",
-        "color": "#c66132",
-        "opacity": 0.62
+        "color": "#f97316",
+        "opacity": 0.78
       },
       "encoding": {
         "longitude": {
@@ -109,7 +109,7 @@
           "type": "quantitative",
           "scale": {
             "range": [
-              1,
+              1.5,
               8
             ]
           },
@@ -189,17 +189,17 @@
       ],
       "mark": {
         "type": "circle",
-        "color": "#7c2f19",
-        "opacity": 0.7,
-        "size": 24
+        "color": "#1769aa",
+        "opacity": 0.9,
+        "size": 46
       },
       "encoding": {
         "longitude": {
-          "field": "release_longitude",
+          "field": "rescue_longitude",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "release_latitude",
+          "field": "rescue_latitude",
           "type": "quantitative"
         },
         "tooltip": [
@@ -207,21 +207,84 @@
             "field": "record_count",
             "type": "quantitative",
             "format": ",",
-            "title": "Records on route"
+            "title": "Reports on route"
           },
           {
-            "field": "release_latitude",
+            "field": "rescue_latitude",
             "type": "quantitative",
             "format": ".2f",
-            "title": "Release latitude"
+            "title": "Rescue latitude"
           },
           {
-            "field": "release_longitude",
+            "field": "rescue_longitude",
             "type": "quantitative",
             "format": ".2f",
-            "title": "Release longitude"
+            "title": "Rescue longitude"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/qld_hospital/qld_koala_hospital_release_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "record_count": "number",
+            "rescue_latitude": "number",
+            "rescue_longitude": "number",
+            "release_latitude": "number",
+            "release_longitude": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.record_count >= 3 && (datum.rescue_latitude != datum.release_latitude || datum.rescue_longitude != datum.release_longitude)"
+        },
+        {
+          "window": [{"op": "rank", "as": "route_rank"}],
+          "sort": [{"field": "record_count", "order": "descending"}]
+        },
+        {"filter": "datum.route_rank <= 15"}
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#c2410c",
+        "opacity": 0.92,
+        "size": 46
+      },
+      "encoding": {
+        "longitude": {"field": "release_longitude", "type": "quantitative"},
+        "latitude": {"field": "release_latitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "record_count", "type": "quantitative", "format": ",", "title": "Reports on route"},
+          {"field": "release_latitude", "type": "quantitative", "format": ".2f", "title": "Release latitude"},
+          {"field": "release_longitude", "type": "quantitative", "format": ".2f", "title": "Release longitude"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"place": "Sunshine Coast", "latitude": -26.65, "longitude": 153.07},
+          {"place": "Brisbane", "latitude": -27.47, "longitude": 153.03},
+          {"place": "Gold Coast", "latitude": -28.02, "longitude": 153.4},
+          {"place": "Toowoomba", "latitude": -27.56, "longitude": 151.95}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 7,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#243e31"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "place"}
       }
     }
   ]
