@@ -46,7 +46,7 @@
       ]
     },
     {
-      "calculate": "datum.cause == 'vehicle_hit_count' ? 'Vehicle hit' : datum.cause == 'caused_by_dog_count' ? 'Dog involvement' : 'Fall'",
+      "calculate": "datum.cause == 'vehicle_hit_count' ? 'Vehicle hit' : datum.cause == 'caused_by_dog_count' ? 'Dog attack or interaction' : 'Fall'",
       "as": "cause_label"
     }
   ],
