@@ -71,9 +71,9 @@
     "y": {
       "field": "records",
       "type": "quantitative",
-      "title": "Flagged records",
+      "title": "Number of records",
       "axis": {
-        "format": ","
+        "format": ",d"
       }
     },
     "color": {
@@ -94,7 +94,7 @@
       },
       {
         "field": "cause_label",
-        "title": "Cause"
+        "title": "Recorded incident"
       },
       {
         "field": "records",

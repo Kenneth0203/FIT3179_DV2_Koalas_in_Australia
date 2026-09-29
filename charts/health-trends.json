@@ -73,7 +73,7 @@
       "type": "quantitative",
       "title": "Flagged records",
       "axis": {
-        "format": ","
+        "format": ",d"
       }
     },
     "color": {
