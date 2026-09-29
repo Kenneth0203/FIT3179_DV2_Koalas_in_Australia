@@ -27,10 +27,10 @@
   "projection": {
     "type": "mercator",
     "center": [
-      152.6,
-      -27.1
+      152.95,
+      -27.35
     ],
-    "scale": 6500
+    "scale": 9000
   },
   "layer": [
     {
@@ -79,24 +79,11 @@
         "color": {
           "field": "record_count",
           "type": "quantitative",
-          "scale": {
-            "type": "threshold",
-            "domain": [
-              10,
-              50,
-              200,
-              1000
-            ],
-            "range": [
-              "#dbeafe",
-              "#93c5fd",
-              "#3b82f6",
-              "#1d4ed8",
-              "#172554"
-            ]
-          },
+          "scale": {"type": "sqrt", "scheme": "plasma"},
           "legend": {
-            "title": "Hospital records in each cell"
+            "title": "Reports in one square",
+            "labelExpr": "format(datum.value, ',')",
+            "gradientLength": 260
           }
         },
         "tooltip": [
