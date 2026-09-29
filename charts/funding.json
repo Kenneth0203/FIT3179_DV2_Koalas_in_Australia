@@ -1,125 +1,66 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "config": {
-    "view": {
-      "stroke": null
-    },
-    "font": "Arial",
-    "axis": {
-      "labelColor": "#526158",
-      "titleColor": "#34483b",
-      "gridColor": "#e8ece5",
-      "domain": false,
-      "labelFontSize": 12
-    },
-    "legend": {
-      "orient": "bottom",
-      "title": null
-    }
-  },
+  "height": 610,
   "background": "transparent",
-  "height": 560,
-  "data": {
-    "url": "src/koala_recovery_projects.csv?v=2",
-    "format": {
-      "type": "csv"
-    }
+  "autosize": {"type": "fit", "contains": "padding"},
+  "config": {
+    "view": {"stroke": null},
+    "font": "Arial",
+    "axis": {"labelColor": "#526158", "titleColor": "#34483b", "gridColor": "#e8ece5", "domain": false, "labelFontSize": 12},
+    "legend": {"orient": "bottom", "title": null}
   },
-  "params": [
-    {
-      "name": "programme",
-      "value": null,
-      "bind": {
-        "input": "select",
-        "options": [
-          null,
-          "Large habitat restoration",
-          "Health grants"
-        ],
-        "labels": [
-          "All programmes",
-          "Habitat restoration",
-          "Health grants"
-        ],
-        "name": "Show: "
-      }
+  "data": {"url": "src/koala_recovery_projects.csv?v=2", "format": {"type": "csv"}},
+  "params": [{
+    "name": "programme",
+    "value": null,
+    "bind": {
+      "input": "select",
+      "options": [null, "Large habitat restoration", "Health grants"],
+      "labels": ["All programmes", "Habitat restoration", "Health grants"],
+      "name": "Show: "
     }
-  ],
+  }],
   "transform": [
+    {"filter": "programme == null || datum.programme_category == programme"},
     {
-      "filter": "programme == null || datum.programme_category == programme"
-    },
-    {
-      "calculate": "datum.project_title == 'Koala Habitat Restoration and Protection in the Southern Highlands and Southern Tablelands Area of Regional Koala Significance (ARKS), NSW' ? 'Koala Habitat Restoration and Protection in the Southern Highlands|and Southern Tablelands Area of Regional Koala Significance (ARKS), NSW' : replace(replace(replace(replace(datum.project_title, ' in the Clarke-Connors Range', '|in the Clarke-Connors Range'), ' in the Coffs Harbour', '|in the Coffs Harbour'), ' Upgrade and Operational Expansion', '|Upgrade and Operational Expansion'), ' through Treatment, Rehabilitation', ' through Treatment,|Rehabilitation')",
-      "as": "project_label"
+      "calculate": "indexof(datum.project_title, 'RSPCA') >= 0 ? 'RSPCA Wildlife Centre\\nof Excellence' : indexof(datum.project_title, 'Clarke-Connors') >= 0 ? 'Clarke-Connors Range\\nHabitat Restoration' : indexof(datum.project_title, 'Mid North Coast') >= 0 ? 'Mid North Coast\\nBush Restoration' : indexof(datum.project_title, 'Together for Koalas') >= 0 ? 'Together for Koalas\\nOur Action, Their Future' : indexof(datum.project_title, 'Sarina') >= 0 ? 'Sarina Habitat\\nRestoration' : indexof(datum.project_title, 'Northern Rivers') >= 0 ? 'Northern Rivers\\nRecovery Hub' : indexof(datum.project_title, 'Australia Zoo') >= 0 ? 'Australia Zoo\\nHospital Upgrade' : indexof(datum.project_title, 'Coffs Harbour') >= 0 ? 'Coffs Harbour–North Bellingen\\nHabitat Restoration' : indexof(datum.project_title, 'Southern Highlands') >= 0 ? 'Southern Highlands & Tablelands\\nHabitat Restoration' : indexof(datum.project_title, 'Port Stephens') >= 0 ? 'Port Stephens Koala Hospital\\nUpgrade & Expansion' : indexof(datum.project_title, 'Toohey Forest') >= 0 ? 'Toohey Forest\\nFauna Crossing' : indexof(datum.project_title, 'Treatment, Rehabilitation') >= 0 ? 'Treatment, Rehabilitation\\n& Applied Research' : indexof(datum.project_title, 'Gympie') >= 0 ? 'Gympie–Burnett Mary\\nHabitat Restoration' : indexof(datum.project_title, 'Grandchester') >= 0 ? 'Grandchester & Flinders Peak\\nHabitat Restoration' : indexof(datum.project_title, 'Northern Tablelands') >= 0 ? 'Northern Tablelands NSW\\nHabitat Restoration' : indexof(datum.project_title, 'implants') >= 0 ? 'Vaccine Implants\\nAgainst Chlamydia' : 'Chlamydia Vaccine\\nProduct Registration'",
+      "as": "bar_label"
     }
   ],
-  "mark": {
-    "type": "bar",
-    "cornerRadiusEnd": 3
-  },
   "encoding": {
-    "y": {
-      "field": "project_label",
-      "type": "nominal",
-      "sort": "-x",
-      "title": null,
-      "axis": {
-        "labelExpr": "split(datum.label, '|')",
-        "labelLimit": 470,
-        "labelFontSize": 11,
-        "labelLineHeight": 14,
-        "labelPadding": 8
-      }
-    },
-    "x": {
-      "field": "funding_aud_ex_gst",
-      "type": "quantitative",
-      "title": "Funding allocation (AUD, excluding GST)",
-      "axis": {
-        "format": "~s",
-        "tickCount": 5
-      }
-    },
-    "color": {
-      "field": "programme_category",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "Large habitat restoration",
-          "Health grants"
-        ],
-        "range": [
-          "#326b50",
-          "#dc9a50"
-        ]
-      },
-      "legend": null
-    },
-    "tooltip": [
-      {
-        "field": "project_title",
-        "title": "Project"
-      },
-      {
-        "field": "delivery_partner",
-        "title": "Partner"
-      },
-      {
-        "field": "funding_aud_ex_gst",
-        "type": "quantitative",
-        "format": "$,.0f",
-        "title": "Allocation"
-      },
-      {
-        "field": "programme_category",
-        "title": "Programme"
-      }
-    ]
+    "y": {"field": "project_title", "type": "nominal", "sort": {"field": "funding_aud_ex_gst", "order": "descending"}, "title": null, "axis": null},
+    "x": {"field": "funding_aud_ex_gst", "type": "quantitative", "title": "Funding allocation (AUD, excluding GST)", "axis": {"format": "~s", "tickCount": 5}}
   },
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  }
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 3},
+      "encoding": {
+        "color": {
+          "field": "programme_category",
+          "type": "nominal",
+          "scale": {"domain": ["Large habitat restoration", "Health grants"], "range": ["#326b50", "#c8791f"]},
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "project_title", "title": "Project"},
+          {"field": "delivery_partner", "title": "Partner"},
+          {"field": "funding_aud_ex_gst", "type": "quantitative", "format": "$,.0f", "title": "Allocation"},
+          {"field": "programme_category", "title": "Programme"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 10, "fontSize": 11, "fontWeight": "bold", "lineBreak": "\n", "lineHeight": 13, "color": "white"},
+      "encoding": {
+        "x": {"datum": 0},
+        "text": {"field": "bar_label"},
+        "tooltip": [
+          {"field": "project_title", "title": "Project"},
+          {"field": "delivery_partner", "title": "Partner"},
+          {"field": "funding_aud_ex_gst", "type": "quantitative", "format": "$,.0f", "title": "Allocation"}
+        ]
+      }
+    }
+  ]
 }
