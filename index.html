@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koalas in Australia | Interactive demo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f3eb;color:#223d32;font-family:system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:56px 24px} .label{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#59735c}h1{font-size:clamp(38px,7vw,72px);line-height:1.05;letter-spacing:-3px;margin:20px 0}p{line-height:1.7;max-width:640px;color:#56665b}.card{background:white;border:1px solid #dce2d6;border-radius:24px;padding:28px;margin-top:32px}.controls{display:flex;gap:32px;align-items:center;flex-wrap:wrap}.slider{flex:1;min-width:200px}input{width:100%;accent-color:#47785b;margin-top:20px}strong{font-size:44px;display:block}#forest{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;background:#eaf0e3;padding:24px;border-radius:16px;margin-top:24px}.cell{text-align:center;font-size:clamp(20px,4vw,36px);border-radius:8px;padding:8px 0;transition:background .2s}.cleared{background:#dcd6c5}button{border:0;border-radius:10px;background:#244d3a;color:white;padding:12px 20px;font:inherit;cursor:pointer}button:hover{background:#386b50}footer{font-size:12px;color:#6a796d;margin-top:28px}output{font-weight:700}.note{font-size:13px} @media(max-width:500px){#forest{padding:12px;gap:3px}.card{padding:18px}h1{letter-spacing:-1px}}
+</style>
+</head>
+<body><main>
+<div class="label">FIT3179 · Demo playground</div>
+<h1>A little more forest.<br>A little more room. 🐨</h1>
+<p>Koalas in Australia — a simple interactive page to test our GitHub Pages website. Move the slider to change this imaginary forest.</p>
+<section class="card" aria-label="Illustrative habitat simulation">
+<div class="controls"><div class="slider"><label for="habitat">Forest remaining: <output id="percent" for="habitat">70%</output></label><input id="habitat" type="range" min="0" max="100" step="10" value="70"></div><div><strong id="count">14</strong><span>illustrative koala spaces</span></div><button id="reset" type="button">Reset forest</button></div>
+<div id="forest" aria-hidden="true"></div>
+<p id="summary" aria-live="polite"></p>
+<p class="note"><b>Demonstration only:</b> these are invented values, not real koala data or an ecological prediction. The toy rule is one koala space per five percentage points of forest. This page is for testing interaction and hosting, not the final assignment.</p>
+</section>
+<footer>Kenneth Hao Kang Lai · Koalas in Australia · 2026<br>Demo created with assistance from OpenAI Codex.</footer>
+</main>
+<script>
+const slider=document.querySelector('#habitat');
+function render(){const value=Number(slider.value),trees=value/2,koalas=value/5;document.querySelector('#percent').textContent=value+'%';document.querySelector('#count').textContent=koalas;document.querySelector('#summary').textContent=`${value}% forest remaining → ${koalas} koala spaces in this imaginary model.`;const forest=document.querySelector('#forest');forest.replaceChildren();for(let i=0;i<50;i++){const cell=document.createElement('div');cell.className='cell'+(i>=trees?' cleared':'');cell.textContent=i<koalas?'🐨':i<trees?'🌳':'·';forest.append(cell)}}
+slider.addEventListener('input',render);document.querySelector('#reset').addEventListener('click',()=>{slider.value=70;render()});render();
+</script></body></html>
