@@ -11,8 +11,7 @@
   },
   "data": {"url": "src/koala_population_estimates.csv?v=2", "format": {"type": "csv"}},
   "transform": [
-    {"filter": "datum.estimate_year == 2025 && datum.population_group != 'National'"},
-    {"calculate": "(toNumber(datum.lower_estimate) + toNumber(datum.upper_estimate)) / 2", "as": "midpoint"}
+    {"filter": "datum.estimate_year == 2025 && datum.population_group != 'National'"}
   ],
   "encoding": {
     "y": {"field": "geographic_coverage", "type": "nominal", "title": null, "sort": ["QLD; NSW; ACT", "VIC; SA"]}
@@ -45,10 +44,6 @@
     {
       "mark": {"type": "text", "align": "left", "dx": 9, "dy": -16, "fontSize": 12, "fontWeight": "bold", "color": "#34483b"},
       "encoding": {"x": {"field": "upper_estimate", "type": "quantitative", "axis": null}, "text": {"field": "upper_estimate", "type": "quantitative", "format": ","}}
-    },
-    {
-      "mark": {"type": "text", "fontSize": 22, "baseline": "middle"},
-      "encoding": {"x": {"field": "midpoint", "type": "quantitative", "axis": null}, "text": {"value": "🐨"}}
     }
   ]
 }
