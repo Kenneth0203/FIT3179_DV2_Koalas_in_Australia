@@ -11,18 +11,7 @@
     "legend": {"orient": "bottom", "title": null}
   },
   "data": {"url": "src/koala_recovery_projects.csv?v=2", "format": {"type": "csv"}},
-  "params": [{
-    "name": "programme",
-    "value": null,
-    "bind": {
-      "input": "select",
-      "options": [null, "Large habitat restoration", "Health grants"],
-      "labels": ["All programmes", "Habitat restoration", "Health grants"],
-      "name": "Show: "
-    }
-  }],
   "transform": [
-    {"filter": "programme == null || datum.programme_category == programme"},
     {
       "calculate": "indexof(datum.project_title, 'RSPCA') >= 0 ? 'RSPCA Wildlife Centre of Excellence' : indexof(datum.project_title, 'Clarke-Connors') >= 0 ? 'Clarke-Connors habitat restoration' : indexof(datum.project_title, 'Mid North Coast') >= 0 ? 'Mid North Coast bush restoration' : indexof(datum.project_title, 'Together for Koalas') >= 0 ? 'Together for Koalas' : indexof(datum.project_title, 'Sarina') >= 0 ? 'Sarina habitat restoration' : indexof(datum.project_title, 'Northern Rivers') >= 0 ? 'Northern Rivers recovery hub' : indexof(datum.project_title, 'Australia Zoo') >= 0 ? 'Australia Zoo hospital upgrade' : indexof(datum.project_title, 'Coffs Harbour') >= 0 ? 'Coffs Harbour–North Bellingen restoration' : indexof(datum.project_title, 'Southern Highlands') >= 0 ? 'Southern Highlands & Tablelands restoration' : indexof(datum.project_title, 'Port Stephens') >= 0 ? 'Port Stephens Koala Hospital upgrade' : indexof(datum.project_title, 'Toohey Forest') >= 0 ? 'Toohey Forest fauna crossing' : indexof(datum.project_title, 'Treatment, Rehabilitation') >= 0 ? 'Koala treatment & applied research' : indexof(datum.project_title, 'Gympie') >= 0 ? 'Gympie–Burnett Mary restoration' : indexof(datum.project_title, 'Grandchester') >= 0 ? 'Grandchester & Flinders Peak restoration' : indexof(datum.project_title, 'Northern Tablelands') >= 0 ? 'Northern Tablelands restoration' : indexof(datum.project_title, 'implants') >= 0 ? 'Vaccine implants' : 'Chlamydia vaccine'",
       "as": "bar_label"
