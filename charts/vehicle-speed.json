@@ -3,7 +3,7 @@
   "config":{"view":{"stroke":null},"font":"Arial","axis":{"labelColor":"#526158","titleColor":"#34483b","gridColor":"#e8ece5","domain":false,"labelFontSize":12}},
   "data":{"url":"data/qld_hospital/qld_koala_vehicle_speed.csv","format":{"type":"csv"}},
   "layer":[
-    {"mark":{"type":"rule","strokeWidth":4,"color":"#89a995"},"encoding":{"x":{"field":"speed_limit_kmh","type":"ordinal","sort":"ascending","axis":{"title":"Recorded road speed limit (km/h)"}},"y":{"field":"record_count","type":"quantitative","axis":{"title":"Vehicle-hit reports","format":","}},"y2":{"datum":0}}},
-    {"mark":{"type":"circle","size":160,"color":"#c86f18","stroke":"white","strokeWidth":1.5},"encoding":{"x":{"field":"speed_limit_kmh","type":"ordinal","sort":"ascending"},"y":{"field":"record_count","type":"quantitative"},"tooltip":[{"field":"speed_limit_kmh","type":"ordinal","title":"Speed limit (km/h)"},{"field":"record_count","type":"quantitative","format":",","title":"Vehicle-hit reports"}]}}
+    {"mark":{"type":"rule","strokeWidth":4,"color":"#89a995"},"encoding":{"x":{"field":"speed_limit_kmh","type":"quantitative","scale":{"domain":[35,115]},"axis":{"title":"Recorded road speed limit (km/h)","values":[40,50,60,70,80,90,100,110],"format":"d"}},"y":{"field":"record_count","type":"quantitative","axis":{"title":"Vehicle-hit reports","format":",d","tickCount":5}},"y2":{"datum":0}}},
+    {"mark":{"type":"circle","size":160,"color":"#c86f18","stroke":"white","strokeWidth":1.5},"encoding":{"x":{"field":"speed_limit_kmh","type":"quantitative"},"y":{"field":"record_count","type":"quantitative"},"tooltip":[{"field":"speed_limit_kmh","type":"quantitative","format":"d","title":"Speed limit (km/h)"},{"field":"record_count","type":"quantitative","format":",d","title":"Vehicle-hit reports"}]}}
   ]
 }
