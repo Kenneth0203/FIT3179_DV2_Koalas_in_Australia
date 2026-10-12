@@ -1,0 +1,12 @@
+{
+  "$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":"container","height":260,"background":"transparent","autosize":{"type":"fit","contains":"padding"},
+  "config":{"view":{"stroke":null},"font":"Arial","axis":{"labelColor":"#526158","titleColor":"#34483b","gridColor":"#e8ece5","domain":false,"labelFontSize":12}},
+  "data":{"url":"data/qld_hospital/qld_koala_hospital_monthly.csv","format":{"type":"csv"}},
+  "mark":{"type":"bar","cornerRadiusTopLeft":5,"cornerRadiusTopRight":5},
+  "encoding":{
+    "x":{"field":"month","type":"ordinal","sort":{"field":"month_number","order":"ascending"},"axis":{"title":null,"labelAngle":-35}},
+    "y":{"field":"record_count","type":"quantitative","axis":{"title":"Reports across 1996–2025","format":","}},
+    "color":{"condition":{"test":"datum.month == 'August' || datum.month == 'September' || datum.month == 'October'","value":"#d17d1d"},"value":"#326b50"},
+    "tooltip":[{"field":"month","title":"Month"},{"field":"record_count","type":"quantitative","format":",","title":"Reports"}]
+  }
+}
