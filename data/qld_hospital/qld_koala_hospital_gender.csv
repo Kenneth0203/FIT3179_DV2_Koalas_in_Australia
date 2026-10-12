@@ -1,0 +1,5 @@
+adult_gender,record_count,source_url,retrieved_date
+Male,17761,https://www.data.qld.gov.au/dataset/koala-hospital-data/resource/e2abf1f6-edac-4d99-a2ca-8eb4dd91f1e8,2026-10-12
+Female,16900,https://www.data.qld.gov.au/dataset/koala-hospital-data/resource/e2abf1f6-edac-4d99-a2ca-8eb4dd91f1e8,2026-10-12
+Not recorded,15027,https://www.data.qld.gov.au/dataset/koala-hospital-data/resource/e2abf1f6-edac-4d99-a2ca-8eb4dd91f1e8,2026-10-12
+Unknown,10120,https://www.data.qld.gov.au/dataset/koala-hospital-data/resource/e2abf1f6-edac-4d99-a2ca-8eb4dd91f1e8,2026-10-12
