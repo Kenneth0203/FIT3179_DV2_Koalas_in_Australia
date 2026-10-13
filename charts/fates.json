@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
+  "height": 470,
   "background": "transparent",
   "autosize": {
     "type": "fit",
@@ -10,69 +11,192 @@
     "view": {
       "stroke": null
     },
-    "font": "Arial",
-    "axis": {
-      "labelColor": "#526158",
-      "titleColor": "#34483b",
-      "gridColor": "#e8ece5",
-      "domain": false,
-      "labelFontSize": 12
-    },
-    "legend": {
-      "orient": "bottom",
-      "title": null
-    }
+    "font": "Arial"
   },
-  "height": 300,
   "data": {
-    "url": "data/qld_hospital/qld_koala_hospital_fates.csv",
-    "format": {
-      "type": "csv"
-    }
-  },
-  "transform": [
-    {
-      "filter": "datum.record_count >= 1000"
-    }
-  ],
-  "mark": {
-    "type": "arc",
-    "innerRadius": 70,
-    "stroke": "#fffefa",
-    "strokeWidth": 2
-  },
-  "encoding": {
-    "theta": {
-      "field": "record_count",
-      "type": "quantitative"
-    },
-    "color": {
-      "field": "adult_fate",
-      "type": "nominal",
-      "scale": {
-        "scheme": "yellowgreenblue"
-      },
-      "legend": {
-        "columns": 2
-      }
-    },
-    "tooltip": [
+    "values": [
       {
-        "field": "adult_fate",
-        "title": "What happened next"
+        "adult_fate": "Hospital",
+        "record_count": 39548,
+        "percent_of_all_records": 66.12,
+        "direct_label": "Hospital\n39,548 \u00b7 66.1%",
+        "label_radius": 88
       },
       {
-        "field": "record_count",
-        "type": "quantitative",
-        "format": ",",
-        "title": "Records"
+        "adult_fate": "Left alone",
+        "record_count": 11572,
+        "percent_of_all_records": 19.35,
+        "direct_label": "Left alone\n11,572 \u00b7 19.4%",
+        "label_radius": 120
       },
       {
-        "field": "percent_of_all_records",
-        "type": "quantitative",
-        "format": ".1f",
-        "title": "Percent"
+        "adult_fate": "Other",
+        "record_count": 4211,
+        "percent_of_all_records": 7.04,
+        "direct_label": "Other\n4,211 \u00b7 7.0%",
+        "label_radius": 165
+      },
+      {
+        "adult_fate": "Unable to capture",
+        "record_count": 2522,
+        "percent_of_all_records": 4.22,
+        "direct_label": "Unable to capture\n2,522 \u00b7 4.2%",
+        "label_radius": 190
+      },
+      {
+        "adult_fate": "Relocated",
+        "record_count": 1808,
+        "percent_of_all_records": 3.02,
+        "direct_label": "Relocated\n1,808 \u00b7 3.0%",
+        "label_radius": 230
       }
     ]
-  }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 82,
+        "outerRadius": 138,
+        "stroke": "#fffefa",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "theta": {
+          "field": "record_count",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "adult_fate",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Hospital",
+              "Left alone",
+              "Other",
+              "Unable to capture",
+              "Relocated"
+            ],
+            "range": [
+              "#2F7D4A",
+              "#E0A126",
+              "#D95F59",
+              "#7A5AA6",
+              "#238E9F"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "adult_fate",
+            "title": "What happened next"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Records"
+          },
+          {
+            "field": "percent_of_all_records",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Percent"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "lineBreak": "\n",
+        "lineHeight": 15,
+        "baseline": "middle",
+        "color": "#243e31",
+        "stroke": "#fffefa",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "theta": {
+          "field": "record_count",
+          "type": "quantitative",
+          "stack": true
+        },
+        "radius": {
+          "field": "label_radius",
+          "type": "quantitative",
+          "scale": null
+        },
+        "text": {
+          "field": "direct_label"
+        },
+        "tooltip": [
+          {
+            "field": "adult_fate",
+            "title": "What happened next"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Records"
+          },
+          {
+            "field": "percent_of_all_records",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Percent"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "lineBreak": "\n",
+        "lineHeight": 15,
+        "baseline": "middle",
+        "color": "#243e31"
+      },
+      "encoding": {
+        "theta": {
+          "field": "record_count",
+          "type": "quantitative",
+          "stack": true
+        },
+        "radius": {
+          "field": "label_radius",
+          "type": "quantitative",
+          "scale": null
+        },
+        "text": {
+          "field": "direct_label"
+        },
+        "tooltip": [
+          {
+            "field": "adult_fate",
+            "title": "What happened next"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Records"
+          },
+          {
+            "field": "percent_of_all_records",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Percent"
+          }
+        ]
+      }
+    }
+  ]
 }
