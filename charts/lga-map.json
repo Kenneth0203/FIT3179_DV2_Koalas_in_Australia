@@ -23,14 +23,14 @@
       "title": null
     }
   },
-  "height": 520,
+  "height": 535,
   "projection": {
     "type": "mercator",
     "center": [
       152.5,
-      -27.15
+      -27.1
     ],
-    "scale": 6100
+    "scale": 6800
   },
   "layer": [
     {
@@ -50,33 +50,153 @@
     },
     {
       "data": {
-        "url": "data/qld_hospital/qld_koala_hospital_lga.csv",
-        "format": {
-          "type": "csv"
-        }
+        "values": [
+          {
+            "council": "Gympie Regional Council",
+            "count_label": "674 hospital reports",
+            "latitude": -26.25688,
+            "longitude": 152.645957,
+            "label_latitude": -26.0,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 674,
+            "koala_lga": "Gympie Regional Council"
+          },
+          {
+            "council": "Sunshine Coast Regional Council",
+            "count_label": "485 hospital reports",
+            "latitude": -26.68774,
+            "longitude": 152.899788,
+            "label_latitude": -26.44,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 485,
+            "koala_lga": "Sunshine Coast Regional Council"
+          },
+          {
+            "council": "Moreton Bay Regional Council",
+            "count_label": "20,648 hospital reports",
+            "latitude": -27.251753,
+            "longitude": 152.974796,
+            "label_latitude": -26.88,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 20648,
+            "koala_lga": "Moreton Bay Regional Council"
+          },
+          {
+            "council": "Redland City Council",
+            "count_label": "13,190 hospital reports",
+            "latitude": -27.538413,
+            "longitude": 153.24357,
+            "label_latitude": -27.32,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 13190,
+            "koala_lga": "Redland City Council"
+          },
+          {
+            "council": "Logan City Council",
+            "count_label": "4,950 hospital reports",
+            "latitude": -27.684899,
+            "longitude": 153.139495,
+            "label_latitude": -27.76,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4950,
+            "koala_lga": "Logan City Council"
+          },
+          {
+            "council": "Gold Coast City Council",
+            "count_label": "4,492 hospital reports",
+            "latitude": -28.016668,
+            "longitude": 153.372978,
+            "label_latitude": -28.2,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4492,
+            "koala_lga": "Gold Coast City Council"
+          },
+          {
+            "council": "South Burnett Regional Council",
+            "count_label": "425 hospital reports",
+            "latitude": -26.478068,
+            "longitude": 151.871889,
+            "label_latitude": -26.0,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 425,
+            "koala_lga": "South Burnett Regional Council"
+          },
+          {
+            "council": "Somerset Regional Council",
+            "count_label": "2,277 hospital reports",
+            "latitude": -27.277633,
+            "longitude": 152.492107,
+            "label_latitude": -26.44,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 2277,
+            "koala_lga": "Somerset Regional Council"
+          },
+          {
+            "council": "Toowoomba Regional Council",
+            "count_label": "731 hospital reports",
+            "latitude": -27.440286,
+            "longitude": 151.860173,
+            "label_latitude": -26.88,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 731,
+            "koala_lga": "Toowoomba Regional Council"
+          },
+          {
+            "council": "Brisbane City Council",
+            "count_label": "4,275 hospital reports",
+            "latitude": -27.522321,
+            "longitude": 153.101452,
+            "label_latitude": -27.32,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 4275,
+            "koala_lga": "Brisbane City Council"
+          },
+          {
+            "council": "Ipswich City Council",
+            "count_label": "3,172 hospital reports",
+            "latitude": -27.673556,
+            "longitude": 152.684978,
+            "label_latitude": -27.76,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 3172,
+            "koala_lga": "Ipswich City Council"
+          },
+          {
+            "council": "Scenic Rim Regional Council",
+            "count_label": "1,103 hospital reports",
+            "latitude": -27.960582,
+            "longitude": 152.769233,
+            "label_latitude": -28.2,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 1103,
+            "koala_lga": "Scenic Rim Regional Council"
+          }
+        ]
       },
-      "transform": [
-        {
-          "filter": "isValid(datum.mean_latitude) && datum.koala_lga != 'Not recorded'"
-        },
-        {
-          "window": [
-            {
-              "op": "rank",
-              "as": "council_rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "record_count",
-              "order": "descending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.council_rank <= 12"
-        }
-      ],
       "mark": {
         "type": "circle",
         "color": "#1769aa",
@@ -86,11 +206,11 @@
       },
       "encoding": {
         "longitude": {
-          "field": "mean_longitude",
+          "field": "longitude",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "mean_latitude",
+          "field": "latitude",
           "type": "quantitative"
         },
         "size": {
@@ -118,13 +238,13 @@
             "title": "Hospital reports"
           },
           {
-            "field": "mean_latitude",
+            "field": "latitude",
             "type": "quantitative",
             "format": ".2f",
             "title": "Latitude"
           },
           {
-            "field": "mean_longitude",
+            "field": "longitude",
             "type": "quantitative",
             "format": ".2f",
             "title": "Longitude"
@@ -140,115 +260,151 @@
             "count_label": "674 hospital reports",
             "latitude": -26.25688,
             "longitude": 152.645957,
-            "label_latitude": -26.18,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.0,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 674,
+            "koala_lga": "Gympie Regional Council"
           },
           {
             "council": "Sunshine Coast Regional Council",
             "count_label": "485 hospital reports",
             "latitude": -26.68774,
             "longitude": 152.899788,
-            "label_latitude": -26.61,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.44,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 485,
+            "koala_lga": "Sunshine Coast Regional Council"
           },
           {
             "council": "Moreton Bay Regional Council",
             "count_label": "20,648 hospital reports",
             "latitude": -27.251753,
             "longitude": 152.974796,
-            "label_latitude": -27.04,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.88,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 20648,
+            "koala_lga": "Moreton Bay Regional Council"
           },
           {
             "council": "Redland City Council",
             "count_label": "13,190 hospital reports",
             "latitude": -27.538413,
             "longitude": 153.24357,
-            "label_latitude": -27.47,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.32,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 13190,
+            "koala_lga": "Redland City Council"
           },
           {
             "council": "Logan City Council",
             "count_label": "4,950 hospital reports",
             "latitude": -27.684899,
             "longitude": 153.139495,
-            "label_latitude": -27.9,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.76,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4950,
+            "koala_lga": "Logan City Council"
           },
           {
             "council": "Gold Coast City Council",
             "count_label": "4,492 hospital reports",
             "latitude": -28.016668,
             "longitude": 153.372978,
-            "label_latitude": -28.33,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -28.2,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4492,
+            "koala_lga": "Gold Coast City Council"
           },
           {
             "council": "South Burnett Regional Council",
             "count_label": "425 hospital reports",
             "latitude": -26.478068,
             "longitude": 151.871889,
-            "label_latitude": -26.18,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.0,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 425,
+            "koala_lga": "South Burnett Regional Council"
           },
           {
             "council": "Somerset Regional Council",
             "count_label": "2,277 hospital reports",
             "latitude": -27.277633,
             "longitude": 152.492107,
-            "label_latitude": -26.61,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.44,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 2277,
+            "koala_lga": "Somerset Regional Council"
           },
           {
             "council": "Toowoomba Regional Council",
             "count_label": "731 hospital reports",
             "latitude": -27.440286,
             "longitude": 151.860173,
-            "label_latitude": -27.04,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.88,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 731,
+            "koala_lga": "Toowoomba Regional Council"
           },
           {
             "council": "Brisbane City Council",
             "count_label": "4,275 hospital reports",
             "latitude": -27.522321,
             "longitude": 153.101452,
-            "label_latitude": -27.47,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.32,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 4275,
+            "koala_lga": "Brisbane City Council"
           },
           {
             "council": "Ipswich City Council",
             "count_label": "3,172 hospital reports",
             "latitude": -27.673556,
             "longitude": 152.684978,
-            "label_latitude": -27.9,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.76,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 3172,
+            "koala_lga": "Ipswich City Council"
           },
           {
             "council": "Scenic Rim Regional Council",
             "count_label": "1,103 hospital reports",
             "latitude": -27.960582,
             "longitude": 152.769233,
-            "label_latitude": -28.33,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -28.2,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 1103,
+            "koala_lga": "Scenic Rim Regional Council"
           }
         ]
       },
       "mark": {
         "type": "rule",
-        "color": "#52675d",
-        "strokeWidth": 1.25
+        "color": "#4f665b",
+        "strokeWidth": 1.35
       },
       "encoding": {
         "longitude": {
@@ -260,7 +416,8 @@
           "type": "quantitative"
         },
         "longitude2": {
-          "field": "label_longitude"
+          "field": "line_longitude",
+          "type": "quantitative"
         },
         "latitude2": {
           "field": "label_latitude"
@@ -275,251 +432,156 @@
             "count_label": "674 hospital reports",
             "latitude": -26.25688,
             "longitude": 152.645957,
-            "label_latitude": -26.18,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.0,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 674,
+            "koala_lga": "Gympie Regional Council"
           },
           {
             "council": "Sunshine Coast Regional Council",
             "count_label": "485 hospital reports",
             "latitude": -26.68774,
             "longitude": 152.899788,
-            "label_latitude": -26.61,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.44,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 485,
+            "koala_lga": "Sunshine Coast Regional Council"
           },
           {
             "council": "Moreton Bay Regional Council",
             "count_label": "20,648 hospital reports",
             "latitude": -27.251753,
             "longitude": 152.974796,
-            "label_latitude": -27.04,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.88,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 20648,
+            "koala_lga": "Moreton Bay Regional Council"
           },
           {
             "council": "Redland City Council",
             "count_label": "13,190 hospital reports",
             "latitude": -27.538413,
             "longitude": 153.24357,
-            "label_latitude": -27.47,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.32,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 13190,
+            "koala_lga": "Redland City Council"
           },
           {
             "council": "Logan City Council",
             "count_label": "4,950 hospital reports",
             "latitude": -27.684899,
             "longitude": 153.139495,
-            "label_latitude": -27.9,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.76,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4950,
+            "koala_lga": "Logan City Council"
           },
           {
             "council": "Gold Coast City Council",
             "count_label": "4,492 hospital reports",
             "latitude": -28.016668,
             "longitude": 153.372978,
-            "label_latitude": -28.33,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -28.2,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4492,
+            "koala_lga": "Gold Coast City Council"
           },
           {
             "council": "South Burnett Regional Council",
             "count_label": "425 hospital reports",
             "latitude": -26.478068,
             "longitude": 151.871889,
-            "label_latitude": -26.18,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.0,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 425,
+            "koala_lga": "South Burnett Regional Council"
           },
           {
             "council": "Somerset Regional Council",
             "count_label": "2,277 hospital reports",
             "latitude": -27.277633,
             "longitude": 152.492107,
-            "label_latitude": -26.61,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.44,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 2277,
+            "koala_lga": "Somerset Regional Council"
           },
           {
             "council": "Toowoomba Regional Council",
             "count_label": "731 hospital reports",
             "latitude": -27.440286,
             "longitude": 151.860173,
-            "label_latitude": -27.04,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.88,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 731,
+            "koala_lga": "Toowoomba Regional Council"
           },
           {
             "council": "Brisbane City Council",
             "count_label": "4,275 hospital reports",
             "latitude": -27.522321,
             "longitude": 153.101452,
-            "label_latitude": -27.47,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.32,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 4275,
+            "koala_lga": "Brisbane City Council"
           },
           {
             "council": "Ipswich City Council",
             "count_label": "3,172 hospital reports",
             "latitude": -27.673556,
             "longitude": 152.684978,
-            "label_latitude": -27.9,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.76,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 3172,
+            "koala_lga": "Ipswich City Council"
           },
           {
             "council": "Scenic Rim Regional Council",
             "count_label": "1,103 hospital reports",
             "latitude": -27.960582,
             "longitude": 152.769233,
-            "label_latitude": -28.33,
-            "label_longitude": 151.3,
-            "side": "left"
-          }
-        ]
-      },
-      "mark": {
-        "type": "circle",
-        "filled": false,
-        "stroke": "#173f31",
-        "strokeWidth": 1.4,
-        "size": 85
-      },
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "council": "Gympie Regional Council",
-            "count_label": "674 hospital reports",
-            "latitude": -26.25688,
-            "longitude": 152.645957,
-            "label_latitude": -26.18,
-            "label_longitude": 153.68,
-            "side": "right"
-          },
-          {
-            "council": "Sunshine Coast Regional Council",
-            "count_label": "485 hospital reports",
-            "latitude": -26.68774,
-            "longitude": 152.899788,
-            "label_latitude": -26.61,
-            "label_longitude": 153.68,
-            "side": "right"
-          },
-          {
-            "council": "Moreton Bay Regional Council",
-            "count_label": "20,648 hospital reports",
-            "latitude": -27.251753,
-            "longitude": 152.974796,
-            "label_latitude": -27.04,
-            "label_longitude": 153.68,
-            "side": "right"
-          },
-          {
-            "council": "Redland City Council",
-            "count_label": "13,190 hospital reports",
-            "latitude": -27.538413,
-            "longitude": 153.24357,
-            "label_latitude": -27.47,
-            "label_longitude": 153.68,
-            "side": "right"
-          },
-          {
-            "council": "Logan City Council",
-            "count_label": "4,950 hospital reports",
-            "latitude": -27.684899,
-            "longitude": 153.139495,
-            "label_latitude": -27.9,
-            "label_longitude": 153.68,
-            "side": "right"
-          },
-          {
-            "council": "Gold Coast City Council",
-            "count_label": "4,492 hospital reports",
-            "latitude": -28.016668,
-            "longitude": 153.372978,
-            "label_latitude": -28.33,
-            "label_longitude": 153.68,
-            "side": "right"
-          },
-          {
-            "council": "South Burnett Regional Council",
-            "count_label": "425 hospital reports",
-            "latitude": -26.478068,
-            "longitude": 151.871889,
-            "label_latitude": -26.18,
-            "label_longitude": 151.3,
-            "side": "left"
-          },
-          {
-            "council": "Somerset Regional Council",
-            "count_label": "2,277 hospital reports",
-            "latitude": -27.277633,
-            "longitude": 152.492107,
-            "label_latitude": -26.61,
-            "label_longitude": 151.3,
-            "side": "left"
-          },
-          {
-            "council": "Toowoomba Regional Council",
-            "count_label": "731 hospital reports",
-            "latitude": -27.440286,
-            "longitude": 151.860173,
-            "label_latitude": -27.04,
-            "label_longitude": 151.3,
-            "side": "left"
-          },
-          {
-            "council": "Brisbane City Council",
-            "count_label": "4,275 hospital reports",
-            "latitude": -27.522321,
-            "longitude": 153.101452,
-            "label_latitude": -27.47,
-            "label_longitude": 151.3,
-            "side": "left"
-          },
-          {
-            "council": "Ipswich City Council",
-            "count_label": "3,172 hospital reports",
-            "latitude": -27.673556,
-            "longitude": 152.684978,
-            "label_latitude": -27.9,
-            "label_longitude": 151.3,
-            "side": "left"
-          },
-          {
-            "council": "Scenic Rim Regional Council",
-            "count_label": "1,103 hospital reports",
-            "latitude": -27.960582,
-            "longitude": 152.769233,
-            "label_latitude": -28.33,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -28.2,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 1103,
+            "koala_lga": "Scenic Rim Regional Council"
           }
         ]
       },
       "mark": {
         "type": "rect",
-        "width": 235,
-        "height": 40,
-        "cornerRadius": 7,
+        "width": 300,
+        "height": 46,
+        "cornerRadius": 8,
         "fill": "#fffdf8",
-        "fillOpacity": 0.96,
-        "stroke": "#8ea095",
-        "strokeWidth": 1
+        "fillOpacity": 1,
+        "stroke": "#789084",
+        "strokeWidth": 1.2
       },
       "encoding": {
         "longitude": {
@@ -540,108 +602,144 @@
             "count_label": "674 hospital reports",
             "latitude": -26.25688,
             "longitude": 152.645957,
-            "label_latitude": -26.18,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.0,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 674,
+            "koala_lga": "Gympie Regional Council"
           },
           {
             "council": "Sunshine Coast Regional Council",
             "count_label": "485 hospital reports",
             "latitude": -26.68774,
             "longitude": 152.899788,
-            "label_latitude": -26.61,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.44,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 485,
+            "koala_lga": "Sunshine Coast Regional Council"
           },
           {
             "council": "Moreton Bay Regional Council",
             "count_label": "20,648 hospital reports",
             "latitude": -27.251753,
             "longitude": 152.974796,
-            "label_latitude": -27.04,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.88,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 20648,
+            "koala_lga": "Moreton Bay Regional Council"
           },
           {
             "council": "Redland City Council",
             "count_label": "13,190 hospital reports",
             "latitude": -27.538413,
             "longitude": 153.24357,
-            "label_latitude": -27.47,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.32,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 13190,
+            "koala_lga": "Redland City Council"
           },
           {
             "council": "Logan City Council",
             "count_label": "4,950 hospital reports",
             "latitude": -27.684899,
             "longitude": 153.139495,
-            "label_latitude": -27.9,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.76,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4950,
+            "koala_lga": "Logan City Council"
           },
           {
             "council": "Gold Coast City Council",
             "count_label": "4,492 hospital reports",
             "latitude": -28.016668,
             "longitude": 153.372978,
-            "label_latitude": -28.33,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -28.2,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4492,
+            "koala_lga": "Gold Coast City Council"
           },
           {
             "council": "South Burnett Regional Council",
             "count_label": "425 hospital reports",
             "latitude": -26.478068,
             "longitude": 151.871889,
-            "label_latitude": -26.18,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.0,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 425,
+            "koala_lga": "South Burnett Regional Council"
           },
           {
             "council": "Somerset Regional Council",
             "count_label": "2,277 hospital reports",
             "latitude": -27.277633,
             "longitude": 152.492107,
-            "label_latitude": -26.61,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.44,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 2277,
+            "koala_lga": "Somerset Regional Council"
           },
           {
             "council": "Toowoomba Regional Council",
             "count_label": "731 hospital reports",
             "latitude": -27.440286,
             "longitude": 151.860173,
-            "label_latitude": -27.04,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.88,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 731,
+            "koala_lga": "Toowoomba Regional Council"
           },
           {
             "council": "Brisbane City Council",
             "count_label": "4,275 hospital reports",
             "latitude": -27.522321,
             "longitude": 153.101452,
-            "label_latitude": -27.47,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.32,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 4275,
+            "koala_lga": "Brisbane City Council"
           },
           {
             "council": "Ipswich City Council",
             "count_label": "3,172 hospital reports",
             "latitude": -27.673556,
             "longitude": 152.684978,
-            "label_latitude": -27.9,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.76,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 3172,
+            "koala_lga": "Ipswich City Council"
           },
           {
             "council": "Scenic Rim Regional Council",
             "count_label": "1,103 hospital reports",
             "latitude": -27.960582,
             "longitude": 152.769233,
-            "label_latitude": -28.33,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -28.2,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 1103,
+            "koala_lga": "Scenic Rim Regional Council"
           }
         ]
       },
@@ -649,8 +747,8 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "dy": -7,
-        "fontSize": 10.5,
+        "dy": -8,
+        "fontSize": 11,
         "fontWeight": "bold",
         "color": "#243e31"
       },
@@ -676,108 +774,144 @@
             "count_label": "674 hospital reports",
             "latitude": -26.25688,
             "longitude": 152.645957,
-            "label_latitude": -26.18,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.0,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 674,
+            "koala_lga": "Gympie Regional Council"
           },
           {
             "council": "Sunshine Coast Regional Council",
             "count_label": "485 hospital reports",
             "latitude": -26.68774,
             "longitude": 152.899788,
-            "label_latitude": -26.61,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.44,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 485,
+            "koala_lga": "Sunshine Coast Regional Council"
           },
           {
             "council": "Moreton Bay Regional Council",
             "count_label": "20,648 hospital reports",
             "latitude": -27.251753,
             "longitude": 152.974796,
-            "label_latitude": -27.04,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -26.88,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 20648,
+            "koala_lga": "Moreton Bay Regional Council"
           },
           {
             "council": "Redland City Council",
             "count_label": "13,190 hospital reports",
             "latitude": -27.538413,
             "longitude": 153.24357,
-            "label_latitude": -27.47,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.32,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 13190,
+            "koala_lga": "Redland City Council"
           },
           {
             "council": "Logan City Council",
             "count_label": "4,950 hospital reports",
             "latitude": -27.684899,
             "longitude": 153.139495,
-            "label_latitude": -27.9,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -27.76,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4950,
+            "koala_lga": "Logan City Council"
           },
           {
             "council": "Gold Coast City Council",
             "count_label": "4,492 hospital reports",
             "latitude": -28.016668,
             "longitude": 153.372978,
-            "label_latitude": -28.33,
-            "label_longitude": 153.68,
-            "side": "right"
+            "label_latitude": -28.2,
+            "label_longitude": 154.75,
+            "side": "right",
+            "line_longitude": 153.48,
+            "record_count": 4492,
+            "koala_lga": "Gold Coast City Council"
           },
           {
             "council": "South Burnett Regional Council",
             "count_label": "425 hospital reports",
             "latitude": -26.478068,
             "longitude": 151.871889,
-            "label_latitude": -26.18,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.0,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 425,
+            "koala_lga": "South Burnett Regional Council"
           },
           {
             "council": "Somerset Regional Council",
             "count_label": "2,277 hospital reports",
             "latitude": -27.277633,
             "longitude": 152.492107,
-            "label_latitude": -26.61,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.44,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 2277,
+            "koala_lga": "Somerset Regional Council"
           },
           {
             "council": "Toowoomba Regional Council",
             "count_label": "731 hospital reports",
             "latitude": -27.440286,
             "longitude": 151.860173,
-            "label_latitude": -27.04,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -26.88,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 731,
+            "koala_lga": "Toowoomba Regional Council"
           },
           {
             "council": "Brisbane City Council",
             "count_label": "4,275 hospital reports",
             "latitude": -27.522321,
             "longitude": 153.101452,
-            "label_latitude": -27.47,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.32,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 4275,
+            "koala_lga": "Brisbane City Council"
           },
           {
             "council": "Ipswich City Council",
             "count_label": "3,172 hospital reports",
             "latitude": -27.673556,
             "longitude": 152.684978,
-            "label_latitude": -27.9,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -27.76,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 3172,
+            "koala_lga": "Ipswich City Council"
           },
           {
             "council": "Scenic Rim Regional Council",
             "count_label": "1,103 hospital reports",
             "latitude": -27.960582,
             "longitude": 152.769233,
-            "label_latitude": -28.33,
-            "label_longitude": 151.3,
-            "side": "left"
+            "label_latitude": -28.2,
+            "label_longitude": 150.25,
+            "side": "left",
+            "line_longitude": 151.52,
+            "record_count": 1103,
+            "koala_lga": "Scenic Rim Regional Council"
           }
         ]
       },
@@ -785,8 +919,8 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "dy": 8,
-        "fontSize": 9.5,
+        "dy": 9,
+        "fontSize": 10,
         "color": "#526158"
       },
       "encoding": {
