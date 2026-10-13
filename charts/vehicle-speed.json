@@ -1,9 +1,147 @@
 {
-  "$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":"container","height":260,"background":"transparent","autosize":{"type":"fit","contains":"padding"},
-  "config":{"view":{"stroke":null},"font":"Arial","axis":{"labelColor":"#526158","titleColor":"#34483b","gridColor":"#e8ece5","domain":false,"labelFontSize":12}},
-  "data":{"url":"data/qld_hospital/qld_koala_vehicle_speed.csv","format":{"type":"csv"}},
-  "layer":[
-    {"mark":{"type":"rule","strokeWidth":4,"color":"#89a995"},"encoding":{"x":{"field":"speed_limit_kmh","type":"quantitative","scale":{"domain":[35,115]},"axis":{"title":"Recorded road speed limit (km/h)","values":[40,50,60,70,80,90,100,110],"format":"d"}},"y":{"field":"record_count","type":"quantitative","axis":{"title":"Vehicle-hit reports","format":",d","tickCount":5}},"y2":{"datum":0}}},
-    {"mark":{"type":"circle","size":160,"color":"#c86f18","stroke":"white","strokeWidth":1.5},"encoding":{"x":{"field":"speed_limit_kmh","type":"quantitative"},"y":{"field":"record_count","type":"quantitative"},"tooltip":[{"field":"speed_limit_kmh","type":"quantitative","format":"d","title":"Speed limit (km/h)"},{"field":"record_count","type":"quantitative","format":",d","title":"Vehicle-hit reports"}]}}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 260,
+  "background": "transparent",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    }
+  },
+  "data": {
+    "url": "data/qld_hospital/qld_koala_vehicle_speed.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 4,
+        "color": "#89a995"
+      },
+      "encoding": {
+        "x": {
+          "field": "speed_limit_kmh",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              35,
+              115
+            ]
+          },
+          "axis": {
+            "title": "Recorded road speed limit (km/h)",
+            "values": [
+              40,
+              50,
+              60,
+              70,
+              80,
+              90,
+              100,
+              110
+            ],
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "record_count",
+          "type": "quantitative",
+          "axis": {
+            "title": "Vehicle-hit reports",
+            "format": ",d",
+            "tickCount": 5
+          }
+        },
+        "y2": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 540,
+        "fill": "#fffdf8",
+        "stroke": "#d13a2f",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "speed_limit_kmh",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "record_count",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "speed_limit_kmh",
+            "type": "quantitative",
+            "format": "d",
+            "title": "Speed limit (km/h)"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",d",
+            "title": "Vehicle-hit reports"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#202820",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "speed_limit_kmh",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "record_count",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "speed_limit_kmh",
+          "type": "quantitative",
+          "format": "d"
+        },
+        "tooltip": [
+          {
+            "field": "speed_limit_kmh",
+            "type": "quantitative",
+            "format": "d",
+            "title": "Speed limit (km/h)"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",d",
+            "title": "Vehicle-hit reports"
+          }
+        ]
+      }
+    }
   ]
 }
