@@ -23,14 +23,14 @@
       "title": null
     }
   },
-  "height": 470,
+  "height": 520,
   "projection": {
     "type": "mercator",
     "center": [
-      151.7,
-      -26.9
+      152.5,
+      -27.15
     ],
-    "scale": 4800
+    "scale": 6100
   },
   "layer": [
     {
@@ -140,8 +140,8 @@
             "count_label": "674 hospital reports",
             "latitude": -26.25688,
             "longitude": 152.645957,
-            "label_latitude": -26.12,
-            "label_longitude": 153.35,
+            "label_latitude": -26.18,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -149,8 +149,8 @@
             "count_label": "485 hospital reports",
             "latitude": -26.68774,
             "longitude": 152.899788,
-            "label_latitude": -26.48,
-            "label_longitude": 153.35,
+            "label_latitude": -26.61,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -158,8 +158,8 @@
             "count_label": "20,648 hospital reports",
             "latitude": -27.251753,
             "longitude": 152.974796,
-            "label_latitude": -26.84,
-            "label_longitude": 153.35,
+            "label_latitude": -27.04,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -167,8 +167,8 @@
             "count_label": "13,190 hospital reports",
             "latitude": -27.538413,
             "longitude": 153.24357,
-            "label_latitude": -27.2,
-            "label_longitude": 153.35,
+            "label_latitude": -27.47,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -176,8 +176,8 @@
             "count_label": "4,950 hospital reports",
             "latitude": -27.684899,
             "longitude": 153.139495,
-            "label_latitude": -27.56,
-            "label_longitude": 153.35,
+            "label_latitude": -27.9,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -185,8 +185,8 @@
             "count_label": "4,492 hospital reports",
             "latitude": -28.016668,
             "longitude": 153.372978,
-            "label_latitude": -27.92,
-            "label_longitude": 153.35,
+            "label_latitude": -28.33,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -194,8 +194,8 @@
             "count_label": "425 hospital reports",
             "latitude": -26.478068,
             "longitude": 151.871889,
-            "label_latitude": -26.12,
-            "label_longitude": 151.32,
+            "label_latitude": -26.18,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -203,8 +203,8 @@
             "count_label": "2,277 hospital reports",
             "latitude": -27.277633,
             "longitude": 152.492107,
-            "label_latitude": -26.55,
-            "label_longitude": 151.32,
+            "label_latitude": -26.61,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -212,8 +212,8 @@
             "count_label": "731 hospital reports",
             "latitude": -27.440286,
             "longitude": 151.860173,
-            "label_latitude": -26.98,
-            "label_longitude": 151.32,
+            "label_latitude": -27.04,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -221,8 +221,8 @@
             "count_label": "4,275 hospital reports",
             "latitude": -27.522321,
             "longitude": 153.101452,
-            "label_latitude": -27.41,
-            "label_longitude": 151.32,
+            "label_latitude": -27.47,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -230,8 +230,8 @@
             "count_label": "3,172 hospital reports",
             "latitude": -27.673556,
             "longitude": 152.684978,
-            "label_latitude": -27.84,
-            "label_longitude": 151.32,
+            "label_latitude": -27.9,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -239,16 +239,16 @@
             "count_label": "1,103 hospital reports",
             "latitude": -27.960582,
             "longitude": 152.769233,
-            "label_latitude": -28.27,
-            "label_longitude": 151.32,
+            "label_latitude": -28.33,
+            "label_longitude": 151.3,
             "side": "left"
           }
         ]
       },
       "mark": {
         "type": "rule",
-        "color": "#53695d",
-        "strokeWidth": 1.1
+        "color": "#52675d",
+        "strokeWidth": 1.25
       },
       "encoding": {
         "longitude": {
@@ -275,8 +275,8 @@
             "count_label": "674 hospital reports",
             "latitude": -26.25688,
             "longitude": 152.645957,
-            "label_latitude": -26.12,
-            "label_longitude": 153.35,
+            "label_latitude": -26.18,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -284,8 +284,8 @@
             "count_label": "485 hospital reports",
             "latitude": -26.68774,
             "longitude": 152.899788,
-            "label_latitude": -26.48,
-            "label_longitude": 153.35,
+            "label_latitude": -26.61,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -293,8 +293,8 @@
             "count_label": "20,648 hospital reports",
             "latitude": -27.251753,
             "longitude": 152.974796,
-            "label_latitude": -26.84,
-            "label_longitude": 153.35,
+            "label_latitude": -27.04,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -302,8 +302,8 @@
             "count_label": "13,190 hospital reports",
             "latitude": -27.538413,
             "longitude": 153.24357,
-            "label_latitude": -27.2,
-            "label_longitude": 153.35,
+            "label_latitude": -27.47,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -311,8 +311,8 @@
             "count_label": "4,950 hospital reports",
             "latitude": -27.684899,
             "longitude": 153.139495,
-            "label_latitude": -27.56,
-            "label_longitude": 153.35,
+            "label_latitude": -27.9,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -320,8 +320,8 @@
             "count_label": "4,492 hospital reports",
             "latitude": -28.016668,
             "longitude": 153.372978,
-            "label_latitude": -27.92,
-            "label_longitude": 153.35,
+            "label_latitude": -28.33,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -329,8 +329,8 @@
             "count_label": "425 hospital reports",
             "latitude": -26.478068,
             "longitude": 151.871889,
-            "label_latitude": -26.12,
-            "label_longitude": 151.32,
+            "label_latitude": -26.18,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -338,8 +338,8 @@
             "count_label": "2,277 hospital reports",
             "latitude": -27.277633,
             "longitude": 152.492107,
-            "label_latitude": -26.55,
-            "label_longitude": 151.32,
+            "label_latitude": -26.61,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -347,8 +347,8 @@
             "count_label": "731 hospital reports",
             "latitude": -27.440286,
             "longitude": 151.860173,
-            "label_latitude": -26.98,
-            "label_longitude": 151.32,
+            "label_latitude": -27.04,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -356,8 +356,8 @@
             "count_label": "4,275 hospital reports",
             "latitude": -27.522321,
             "longitude": 153.101452,
-            "label_latitude": -27.41,
-            "label_longitude": 151.32,
+            "label_latitude": -27.47,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -365,8 +365,8 @@
             "count_label": "3,172 hospital reports",
             "latitude": -27.673556,
             "longitude": 152.684978,
-            "label_latitude": -27.84,
-            "label_longitude": 151.32,
+            "label_latitude": -27.9,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -374,23 +374,283 @@
             "count_label": "1,103 hospital reports",
             "latitude": -27.960582,
             "longitude": 152.769233,
-            "label_latitude": -28.27,
-            "label_longitude": 151.32,
+            "label_latitude": -28.33,
+            "label_longitude": 151.3,
             "side": "left"
           }
         ]
       },
-      "transform": [
-        {
-          "filter": "datum.side == 'right'"
+      "mark": {
+        "type": "circle",
+        "filled": false,
+        "stroke": "#173f31",
+        "strokeWidth": 1.4,
+        "size": 85
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
         }
-      ],
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "council": "Gympie Regional Council",
+            "count_label": "674 hospital reports",
+            "latitude": -26.25688,
+            "longitude": 152.645957,
+            "label_latitude": -26.18,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Sunshine Coast Regional Council",
+            "count_label": "485 hospital reports",
+            "latitude": -26.68774,
+            "longitude": 152.899788,
+            "label_latitude": -26.61,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Moreton Bay Regional Council",
+            "count_label": "20,648 hospital reports",
+            "latitude": -27.251753,
+            "longitude": 152.974796,
+            "label_latitude": -27.04,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Redland City Council",
+            "count_label": "13,190 hospital reports",
+            "latitude": -27.538413,
+            "longitude": 153.24357,
+            "label_latitude": -27.47,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Logan City Council",
+            "count_label": "4,950 hospital reports",
+            "latitude": -27.684899,
+            "longitude": 153.139495,
+            "label_latitude": -27.9,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Gold Coast City Council",
+            "count_label": "4,492 hospital reports",
+            "latitude": -28.016668,
+            "longitude": 153.372978,
+            "label_latitude": -28.33,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "South Burnett Regional Council",
+            "count_label": "425 hospital reports",
+            "latitude": -26.478068,
+            "longitude": 151.871889,
+            "label_latitude": -26.18,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Somerset Regional Council",
+            "count_label": "2,277 hospital reports",
+            "latitude": -27.277633,
+            "longitude": 152.492107,
+            "label_latitude": -26.61,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Toowoomba Regional Council",
+            "count_label": "731 hospital reports",
+            "latitude": -27.440286,
+            "longitude": 151.860173,
+            "label_latitude": -27.04,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Brisbane City Council",
+            "count_label": "4,275 hospital reports",
+            "latitude": -27.522321,
+            "longitude": 153.101452,
+            "label_latitude": -27.47,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Ipswich City Council",
+            "count_label": "3,172 hospital reports",
+            "latitude": -27.673556,
+            "longitude": 152.684978,
+            "label_latitude": -27.9,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Scenic Rim Regional Council",
+            "count_label": "1,103 hospital reports",
+            "latitude": -27.960582,
+            "longitude": 152.769233,
+            "label_latitude": -28.33,
+            "label_longitude": 151.3,
+            "side": "left"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "width": 235,
+        "height": 40,
+        "cornerRadius": 7,
+        "fill": "#fffdf8",
+        "fillOpacity": 0.96,
+        "stroke": "#8ea095",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_latitude",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "council": "Gympie Regional Council",
+            "count_label": "674 hospital reports",
+            "latitude": -26.25688,
+            "longitude": 152.645957,
+            "label_latitude": -26.18,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Sunshine Coast Regional Council",
+            "count_label": "485 hospital reports",
+            "latitude": -26.68774,
+            "longitude": 152.899788,
+            "label_latitude": -26.61,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Moreton Bay Regional Council",
+            "count_label": "20,648 hospital reports",
+            "latitude": -27.251753,
+            "longitude": 152.974796,
+            "label_latitude": -27.04,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Redland City Council",
+            "count_label": "13,190 hospital reports",
+            "latitude": -27.538413,
+            "longitude": 153.24357,
+            "label_latitude": -27.47,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Logan City Council",
+            "count_label": "4,950 hospital reports",
+            "latitude": -27.684899,
+            "longitude": 153.139495,
+            "label_latitude": -27.9,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "Gold Coast City Council",
+            "count_label": "4,492 hospital reports",
+            "latitude": -28.016668,
+            "longitude": 153.372978,
+            "label_latitude": -28.33,
+            "label_longitude": 153.68,
+            "side": "right"
+          },
+          {
+            "council": "South Burnett Regional Council",
+            "count_label": "425 hospital reports",
+            "latitude": -26.478068,
+            "longitude": 151.871889,
+            "label_latitude": -26.18,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Somerset Regional Council",
+            "count_label": "2,277 hospital reports",
+            "latitude": -27.277633,
+            "longitude": 152.492107,
+            "label_latitude": -26.61,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Toowoomba Regional Council",
+            "count_label": "731 hospital reports",
+            "latitude": -27.440286,
+            "longitude": 151.860173,
+            "label_latitude": -27.04,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Brisbane City Council",
+            "count_label": "4,275 hospital reports",
+            "latitude": -27.522321,
+            "longitude": 153.101452,
+            "label_latitude": -27.47,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Ipswich City Council",
+            "count_label": "3,172 hospital reports",
+            "latitude": -27.673556,
+            "longitude": 152.684978,
+            "label_latitude": -27.9,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "council": "Scenic Rim Regional Council",
+            "count_label": "1,103 hospital reports",
+            "latitude": -27.960582,
+            "longitude": 152.769233,
+            "label_latitude": -28.33,
+            "label_longitude": 151.3,
+            "side": "left"
+          }
+        ]
+      },
       "mark": {
         "type": "text",
-        "align": "left",
-        "dx": 7,
-        "dy": -6,
-        "fontSize": 11,
+        "align": "center",
+        "baseline": "middle",
+        "dy": -7,
+        "fontSize": 10.5,
         "fontWeight": "bold",
         "color": "#243e31"
       },
@@ -416,8 +676,8 @@
             "count_label": "674 hospital reports",
             "latitude": -26.25688,
             "longitude": 152.645957,
-            "label_latitude": -26.12,
-            "label_longitude": 153.35,
+            "label_latitude": -26.18,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -425,8 +685,8 @@
             "count_label": "485 hospital reports",
             "latitude": -26.68774,
             "longitude": 152.899788,
-            "label_latitude": -26.48,
-            "label_longitude": 153.35,
+            "label_latitude": -26.61,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -434,8 +694,8 @@
             "count_label": "20,648 hospital reports",
             "latitude": -27.251753,
             "longitude": 152.974796,
-            "label_latitude": -26.84,
-            "label_longitude": 153.35,
+            "label_latitude": -27.04,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -443,8 +703,8 @@
             "count_label": "13,190 hospital reports",
             "latitude": -27.538413,
             "longitude": 153.24357,
-            "label_latitude": -27.2,
-            "label_longitude": 153.35,
+            "label_latitude": -27.47,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -452,8 +712,8 @@
             "count_label": "4,950 hospital reports",
             "latitude": -27.684899,
             "longitude": 153.139495,
-            "label_latitude": -27.56,
-            "label_longitude": 153.35,
+            "label_latitude": -27.9,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -461,8 +721,8 @@
             "count_label": "4,492 hospital reports",
             "latitude": -28.016668,
             "longitude": 153.372978,
-            "label_latitude": -27.92,
-            "label_longitude": 153.35,
+            "label_latitude": -28.33,
+            "label_longitude": 153.68,
             "side": "right"
           },
           {
@@ -470,8 +730,8 @@
             "count_label": "425 hospital reports",
             "latitude": -26.478068,
             "longitude": 151.871889,
-            "label_latitude": -26.12,
-            "label_longitude": 151.32,
+            "label_latitude": -26.18,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -479,8 +739,8 @@
             "count_label": "2,277 hospital reports",
             "latitude": -27.277633,
             "longitude": 152.492107,
-            "label_latitude": -26.55,
-            "label_longitude": 151.32,
+            "label_latitude": -26.61,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -488,8 +748,8 @@
             "count_label": "731 hospital reports",
             "latitude": -27.440286,
             "longitude": 151.860173,
-            "label_latitude": -26.98,
-            "label_longitude": 151.32,
+            "label_latitude": -27.04,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -497,8 +757,8 @@
             "count_label": "4,275 hospital reports",
             "latitude": -27.522321,
             "longitude": 153.101452,
-            "label_latitude": -27.41,
-            "label_longitude": 151.32,
+            "label_latitude": -27.47,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -506,8 +766,8 @@
             "count_label": "3,172 hospital reports",
             "latitude": -27.673556,
             "longitude": 152.684978,
-            "label_latitude": -27.84,
-            "label_longitude": 151.32,
+            "label_latitude": -27.9,
+            "label_longitude": 151.3,
             "side": "left"
           },
           {
@@ -515,306 +775,18 @@
             "count_label": "1,103 hospital reports",
             "latitude": -27.960582,
             "longitude": 152.769233,
-            "label_latitude": -28.27,
-            "label_longitude": 151.32,
+            "label_latitude": -28.33,
+            "label_longitude": 151.3,
             "side": "left"
           }
         ]
       },
-      "transform": [
-        {
-          "filter": "datum.side == 'right'"
-        }
-      ],
       "mark": {
         "type": "text",
-        "align": "left",
-        "dx": 7,
+        "align": "center",
+        "baseline": "middle",
         "dy": 8,
-        "fontSize": 10,
-        "fontWeight": "normal",
-        "color": "#526158"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "label_longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "label_latitude",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "count_label"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "council": "Gympie Regional Council",
-            "count_label": "674 hospital reports",
-            "latitude": -26.25688,
-            "longitude": 152.645957,
-            "label_latitude": -26.12,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Sunshine Coast Regional Council",
-            "count_label": "485 hospital reports",
-            "latitude": -26.68774,
-            "longitude": 152.899788,
-            "label_latitude": -26.48,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Moreton Bay Regional Council",
-            "count_label": "20,648 hospital reports",
-            "latitude": -27.251753,
-            "longitude": 152.974796,
-            "label_latitude": -26.84,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Redland City Council",
-            "count_label": "13,190 hospital reports",
-            "latitude": -27.538413,
-            "longitude": 153.24357,
-            "label_latitude": -27.2,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Logan City Council",
-            "count_label": "4,950 hospital reports",
-            "latitude": -27.684899,
-            "longitude": 153.139495,
-            "label_latitude": -27.56,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Gold Coast City Council",
-            "count_label": "4,492 hospital reports",
-            "latitude": -28.016668,
-            "longitude": 153.372978,
-            "label_latitude": -27.92,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "South Burnett Regional Council",
-            "count_label": "425 hospital reports",
-            "latitude": -26.478068,
-            "longitude": 151.871889,
-            "label_latitude": -26.12,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Somerset Regional Council",
-            "count_label": "2,277 hospital reports",
-            "latitude": -27.277633,
-            "longitude": 152.492107,
-            "label_latitude": -26.55,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Toowoomba Regional Council",
-            "count_label": "731 hospital reports",
-            "latitude": -27.440286,
-            "longitude": 151.860173,
-            "label_latitude": -26.98,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Brisbane City Council",
-            "count_label": "4,275 hospital reports",
-            "latitude": -27.522321,
-            "longitude": 153.101452,
-            "label_latitude": -27.41,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Ipswich City Council",
-            "count_label": "3,172 hospital reports",
-            "latitude": -27.673556,
-            "longitude": 152.684978,
-            "label_latitude": -27.84,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Scenic Rim Regional Council",
-            "count_label": "1,103 hospital reports",
-            "latitude": -27.960582,
-            "longitude": 152.769233,
-            "label_latitude": -28.27,
-            "label_longitude": 151.32,
-            "side": "left"
-          }
-        ]
-      },
-      "transform": [
-        {
-          "filter": "datum.side == 'left'"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "dx": -7,
-        "dy": -6,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#243e31"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "label_longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "label_latitude",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "council"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "council": "Gympie Regional Council",
-            "count_label": "674 hospital reports",
-            "latitude": -26.25688,
-            "longitude": 152.645957,
-            "label_latitude": -26.12,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Sunshine Coast Regional Council",
-            "count_label": "485 hospital reports",
-            "latitude": -26.68774,
-            "longitude": 152.899788,
-            "label_latitude": -26.48,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Moreton Bay Regional Council",
-            "count_label": "20,648 hospital reports",
-            "latitude": -27.251753,
-            "longitude": 152.974796,
-            "label_latitude": -26.84,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Redland City Council",
-            "count_label": "13,190 hospital reports",
-            "latitude": -27.538413,
-            "longitude": 153.24357,
-            "label_latitude": -27.2,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Logan City Council",
-            "count_label": "4,950 hospital reports",
-            "latitude": -27.684899,
-            "longitude": 153.139495,
-            "label_latitude": -27.56,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "Gold Coast City Council",
-            "count_label": "4,492 hospital reports",
-            "latitude": -28.016668,
-            "longitude": 153.372978,
-            "label_latitude": -27.92,
-            "label_longitude": 153.35,
-            "side": "right"
-          },
-          {
-            "council": "South Burnett Regional Council",
-            "count_label": "425 hospital reports",
-            "latitude": -26.478068,
-            "longitude": 151.871889,
-            "label_latitude": -26.12,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Somerset Regional Council",
-            "count_label": "2,277 hospital reports",
-            "latitude": -27.277633,
-            "longitude": 152.492107,
-            "label_latitude": -26.55,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Toowoomba Regional Council",
-            "count_label": "731 hospital reports",
-            "latitude": -27.440286,
-            "longitude": 151.860173,
-            "label_latitude": -26.98,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Brisbane City Council",
-            "count_label": "4,275 hospital reports",
-            "latitude": -27.522321,
-            "longitude": 153.101452,
-            "label_latitude": -27.41,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Ipswich City Council",
-            "count_label": "3,172 hospital reports",
-            "latitude": -27.673556,
-            "longitude": 152.684978,
-            "label_latitude": -27.84,
-            "label_longitude": 151.32,
-            "side": "left"
-          },
-          {
-            "council": "Scenic Rim Regional Council",
-            "count_label": "1,103 hospital reports",
-            "latitude": -27.960582,
-            "longitude": 152.769233,
-            "label_latitude": -28.27,
-            "label_longitude": 151.32,
-            "side": "left"
-          }
-        ]
-      },
-      "transform": [
-        {
-          "filter": "datum.side == 'left'"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "dx": -7,
-        "dy": 8,
-        "fontSize": 10,
-        "fontWeight": "normal",
+        "fontSize": 9.5,
         "color": "#526158"
       },
       "encoding": {
