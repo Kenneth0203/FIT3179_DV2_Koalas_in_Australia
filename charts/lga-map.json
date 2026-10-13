@@ -135,24 +135,380 @@
     {
       "data": {
         "values": [
-          {"name": "Sunshine Coast", "latitude": -26.65, "longitude": 153.07},
-          {"name": "Brisbane", "latitude": -27.47, "longitude": 153.03},
-          {"name": "Gold Coast", "latitude": -28.02, "longitude": 153.4},
-          {"name": "Toowoomba", "latitude": -27.56, "longitude": 151.95}
+          {
+            "name": "Moreton Bay · 20,648",
+            "latitude": -27.251753,
+            "longitude": 152.974796,
+            "label_latitude": -27.18,
+            "label_longitude": 153.55,
+            "side": "right"
+          },
+          {
+            "name": "Redland · 13,190",
+            "latitude": -27.538413,
+            "longitude": 153.24357,
+            "label_latitude": -27.48,
+            "label_longitude": 153.7,
+            "side": "right"
+          },
+          {
+            "name": "Logan · 4,950",
+            "latitude": -27.684899,
+            "longitude": 153.139495,
+            "label_latitude": -27.72,
+            "label_longitude": 153.62,
+            "side": "right"
+          },
+          {
+            "name": "Gold Coast · 4,492",
+            "latitude": -28.016668,
+            "longitude": 153.372978,
+            "label_latitude": -28.12,
+            "label_longitude": 153.75,
+            "side": "right"
+          },
+          {
+            "name": "Brisbane · 4,275",
+            "latitude": -27.522321,
+            "longitude": 153.101452,
+            "label_latitude": -27.43,
+            "label_longitude": 152.55,
+            "side": "left"
+          },
+          {
+            "name": "Ipswich · 3,172",
+            "latitude": -27.673556,
+            "longitude": 152.684978,
+            "label_latitude": -27.76,
+            "label_longitude": 152.14,
+            "side": "left"
+          },
+          {
+            "name": "Somerset · 2,277",
+            "latitude": -27.277633,
+            "longitude": 152.492107,
+            "label_latitude": -27.14,
+            "label_longitude": 151.92,
+            "side": "left"
+          },
+          {
+            "name": "Scenic Rim · 1,103",
+            "latitude": -27.960582,
+            "longitude": 152.769233,
+            "label_latitude": -28.14,
+            "label_longitude": 152.12,
+            "side": "left"
+          },
+          {
+            "name": "Toowoomba · 731",
+            "latitude": -27.440286,
+            "longitude": 151.860173,
+            "label_latitude": -27.5,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "name": "Gympie · 674",
+            "latitude": -26.25688,
+            "longitude": 152.645957,
+            "label_latitude": -26.13,
+            "label_longitude": 153.3,
+            "side": "right"
+          },
+          {
+            "name": "Sunshine Coast · 485",
+            "latitude": -26.68774,
+            "longitude": 152.899788,
+            "label_latitude": -26.66,
+            "label_longitude": 153.48,
+            "side": "right"
+          },
+          {
+            "name": "South Burnett · 425",
+            "latitude": -26.478068,
+            "longitude": 151.871889,
+            "label_latitude": -26.34,
+            "label_longitude": 151.25,
+            "side": "left"
+          }
         ]
       },
       "mark": {
+        "type": "rule",
+        "color": "#53695d",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "label_longitude"
+        },
+        "latitude2": {
+          "field": "label_latitude"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "name": "Moreton Bay · 20,648",
+            "latitude": -27.251753,
+            "longitude": 152.974796,
+            "label_latitude": -27.18,
+            "label_longitude": 153.55,
+            "side": "right"
+          },
+          {
+            "name": "Redland · 13,190",
+            "latitude": -27.538413,
+            "longitude": 153.24357,
+            "label_latitude": -27.48,
+            "label_longitude": 153.7,
+            "side": "right"
+          },
+          {
+            "name": "Logan · 4,950",
+            "latitude": -27.684899,
+            "longitude": 153.139495,
+            "label_latitude": -27.72,
+            "label_longitude": 153.62,
+            "side": "right"
+          },
+          {
+            "name": "Gold Coast · 4,492",
+            "latitude": -28.016668,
+            "longitude": 153.372978,
+            "label_latitude": -28.12,
+            "label_longitude": 153.75,
+            "side": "right"
+          },
+          {
+            "name": "Brisbane · 4,275",
+            "latitude": -27.522321,
+            "longitude": 153.101452,
+            "label_latitude": -27.43,
+            "label_longitude": 152.55,
+            "side": "left"
+          },
+          {
+            "name": "Ipswich · 3,172",
+            "latitude": -27.673556,
+            "longitude": 152.684978,
+            "label_latitude": -27.76,
+            "label_longitude": 152.14,
+            "side": "left"
+          },
+          {
+            "name": "Somerset · 2,277",
+            "latitude": -27.277633,
+            "longitude": 152.492107,
+            "label_latitude": -27.14,
+            "label_longitude": 151.92,
+            "side": "left"
+          },
+          {
+            "name": "Scenic Rim · 1,103",
+            "latitude": -27.960582,
+            "longitude": 152.769233,
+            "label_latitude": -28.14,
+            "label_longitude": 152.12,
+            "side": "left"
+          },
+          {
+            "name": "Toowoomba · 731",
+            "latitude": -27.440286,
+            "longitude": 151.860173,
+            "label_latitude": -27.5,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "name": "Gympie · 674",
+            "latitude": -26.25688,
+            "longitude": 152.645957,
+            "label_latitude": -26.13,
+            "label_longitude": 153.3,
+            "side": "right"
+          },
+          {
+            "name": "Sunshine Coast · 485",
+            "latitude": -26.68774,
+            "longitude": 152.899788,
+            "label_latitude": -26.66,
+            "label_longitude": 153.48,
+            "side": "right"
+          },
+          {
+            "name": "South Burnett · 425",
+            "latitude": -26.478068,
+            "longitude": 151.871889,
+            "label_latitude": -26.34,
+            "label_longitude": 151.25,
+            "side": "left"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.side == 'right'"
+        }
+      ],
+      "mark": {
         "type": "text",
         "align": "left",
-        "dx": 7,
-        "fontSize": 12,
+        "dx": 6,
+        "fontSize": 11,
         "fontWeight": "bold",
         "color": "#243e31"
       },
       "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "name"}
+        "longitude": {
+          "field": "label_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "name": "Moreton Bay · 20,648",
+            "latitude": -27.251753,
+            "longitude": 152.974796,
+            "label_latitude": -27.18,
+            "label_longitude": 153.55,
+            "side": "right"
+          },
+          {
+            "name": "Redland · 13,190",
+            "latitude": -27.538413,
+            "longitude": 153.24357,
+            "label_latitude": -27.48,
+            "label_longitude": 153.7,
+            "side": "right"
+          },
+          {
+            "name": "Logan · 4,950",
+            "latitude": -27.684899,
+            "longitude": 153.139495,
+            "label_latitude": -27.72,
+            "label_longitude": 153.62,
+            "side": "right"
+          },
+          {
+            "name": "Gold Coast · 4,492",
+            "latitude": -28.016668,
+            "longitude": 153.372978,
+            "label_latitude": -28.12,
+            "label_longitude": 153.75,
+            "side": "right"
+          },
+          {
+            "name": "Brisbane · 4,275",
+            "latitude": -27.522321,
+            "longitude": 153.101452,
+            "label_latitude": -27.43,
+            "label_longitude": 152.55,
+            "side": "left"
+          },
+          {
+            "name": "Ipswich · 3,172",
+            "latitude": -27.673556,
+            "longitude": 152.684978,
+            "label_latitude": -27.76,
+            "label_longitude": 152.14,
+            "side": "left"
+          },
+          {
+            "name": "Somerset · 2,277",
+            "latitude": -27.277633,
+            "longitude": 152.492107,
+            "label_latitude": -27.14,
+            "label_longitude": 151.92,
+            "side": "left"
+          },
+          {
+            "name": "Scenic Rim · 1,103",
+            "latitude": -27.960582,
+            "longitude": 152.769233,
+            "label_latitude": -28.14,
+            "label_longitude": 152.12,
+            "side": "left"
+          },
+          {
+            "name": "Toowoomba · 731",
+            "latitude": -27.440286,
+            "longitude": 151.860173,
+            "label_latitude": -27.5,
+            "label_longitude": 151.3,
+            "side": "left"
+          },
+          {
+            "name": "Gympie · 674",
+            "latitude": -26.25688,
+            "longitude": 152.645957,
+            "label_latitude": -26.13,
+            "label_longitude": 153.3,
+            "side": "right"
+          },
+          {
+            "name": "Sunshine Coast · 485",
+            "latitude": -26.68774,
+            "longitude": 152.899788,
+            "label_latitude": -26.66,
+            "label_longitude": 153.48,
+            "side": "right"
+          },
+          {
+            "name": "South Burnett · 425",
+            "latitude": -26.478068,
+            "longitude": 151.871889,
+            "label_latitude": -26.34,
+            "label_longitude": 151.25,
+            "side": "left"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.side == 'left'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -6,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#243e31"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name"
+        }
       }
     }
   ]
