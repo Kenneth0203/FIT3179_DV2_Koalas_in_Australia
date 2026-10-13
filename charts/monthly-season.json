@@ -1,12 +1,758 @@
 {
-  "$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":"container","height":260,"background":"transparent","autosize":{"type":"fit","contains":"padding"},
-  "config":{"view":{"stroke":null},"font":"Arial","axis":{"labelColor":"#526158","titleColor":"#34483b","gridColor":"#e8ece5","domain":false,"labelFontSize":12}},
-  "data":{"url":"data/qld_hospital/qld_koala_hospital_monthly.csv","format":{"type":"csv"}},
-  "mark":{"type":"bar","cornerRadiusTopLeft":5,"cornerRadiusTopRight":5},
-  "encoding":{
-    "x":{"field":"month","type":"ordinal","sort":{"field":"month_number","order":"ascending"},"axis":{"title":null,"labelAngle":-35}},
-    "y":{"field":"record_count","type":"quantitative","axis":{"title":"Reports across 1996–2025","format":","}},
-    "color":{"condition":{"test":"datum.month == 'August' || datum.month == 'September' || datum.month == 'October'","value":"#d17d1d"},"value":"#326b50"},
-    "tooltip":[{"field":"month","title":"Month"},{"field":"record_count","type":"quantitative","format":",","title":"Reports"}]
-  }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "background": "transparent",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "month_number": 1,
+            "month": "January",
+            "record_count": 4277,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 1,
+            "month": "January",
+            "record_count": 4277,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 1,
+            "month": "January",
+            "record_count": 4277,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 1,
+            "month": "January",
+            "record_count": 4277,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 2,
+            "month": "February",
+            "record_count": 3309,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 2,
+            "month": "February",
+            "record_count": 3309,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 2,
+            "month": "February",
+            "record_count": 3309,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 3,
+            "month": "March",
+            "record_count": 3161,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 3,
+            "month": "March",
+            "record_count": 3161,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 3,
+            "month": "March",
+            "record_count": 3161,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 4,
+            "month": "April",
+            "record_count": 3076,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 4,
+            "month": "April",
+            "record_count": 3076,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 4,
+            "month": "April",
+            "record_count": 3076,
+            "icon_count": 3,
+            "label_y": 3620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 5,
+            "month": "May",
+            "record_count": 3674,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 5,
+            "month": "May",
+            "record_count": 3674,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 5,
+            "month": "May",
+            "record_count": 3674,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 5,
+            "month": "May",
+            "record_count": 3674,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 6,
+            "month": "June",
+            "record_count": 4053,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 6,
+            "month": "June",
+            "record_count": 4053,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 6,
+            "month": "June",
+            "record_count": 4053,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 6,
+            "month": "June",
+            "record_count": 4053,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 7,
+            "month": "July",
+            "record_count": 5448,
+            "icon_count": 5,
+            "label_y": 5620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 7,
+            "month": "July",
+            "record_count": 5448,
+            "icon_count": 5,
+            "label_y": 5620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 7,
+            "month": "July",
+            "record_count": 5448,
+            "icon_count": 5,
+            "label_y": 5620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 7,
+            "month": "July",
+            "record_count": 5448,
+            "icon_count": 5,
+            "label_y": 5620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 7,
+            "month": "July",
+            "record_count": 5448,
+            "icon_count": 5,
+            "label_y": 5620,
+            "icon_level": 5,
+            "icon_y": 5000
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 5,
+            "icon_y": 5000
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 6,
+            "icon_y": 6000
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 7,
+            "icon_y": 7000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 5,
+            "icon_y": 5000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 6,
+            "icon_y": 6000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 7,
+            "icon_y": 7000
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620,
+            "icon_level": 8,
+            "icon_y": 8000
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 5,
+            "icon_y": 5000
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 6,
+            "icon_y": 6000
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620,
+            "icon_level": 7,
+            "icon_y": 7000
+          },
+          {
+            "month_number": 11,
+            "month": "November",
+            "record_count": 5846,
+            "icon_count": 6,
+            "label_y": 6620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 11,
+            "month": "November",
+            "record_count": 5846,
+            "icon_count": 6,
+            "label_y": 6620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 11,
+            "month": "November",
+            "record_count": 5846,
+            "icon_count": 6,
+            "label_y": 6620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 11,
+            "month": "November",
+            "record_count": 5846,
+            "icon_count": 6,
+            "label_y": 6620,
+            "icon_level": 4,
+            "icon_y": 4000
+          },
+          {
+            "month_number": 11,
+            "month": "November",
+            "record_count": 5846,
+            "icon_count": 6,
+            "label_y": 6620,
+            "icon_level": 5,
+            "icon_y": 5000
+          },
+          {
+            "month_number": 11,
+            "month": "November",
+            "record_count": 5846,
+            "icon_count": 6,
+            "label_y": 6620,
+            "icon_level": 6,
+            "icon_y": 6000
+          },
+          {
+            "month_number": 12,
+            "month": "December",
+            "record_count": 4288,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 1,
+            "icon_y": 1000
+          },
+          {
+            "month_number": 12,
+            "month": "December",
+            "record_count": 4288,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 2,
+            "icon_y": 2000
+          },
+          {
+            "month_number": 12,
+            "month": "December",
+            "record_count": 4288,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 3,
+            "icon_y": 3000
+          },
+          {
+            "month_number": 12,
+            "month": "December",
+            "record_count": 4288,
+            "icon_count": 4,
+            "label_y": 4620,
+            "icon_level": 4,
+            "icon_y": 4000
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 23,
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "sort": {
+            "field": "month_number",
+            "order": "ascending"
+          },
+          "axis": {
+            "title": null,
+            "labelAngle": -35
+          }
+        },
+        "y": {
+          "field": "icon_y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              9000
+            ]
+          },
+          "axis": {
+            "title": "Reports across 1996–2025",
+            "values": [
+              0,
+              2000,
+              4000,
+              6000,
+              8000
+            ],
+            "format": ",d"
+          }
+        },
+        "text": {
+          "value": "🐨"
+        },
+        "tooltip": [
+          {
+            "field": "month",
+            "title": "Month"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",d",
+            "title": "Reports"
+          },
+          {
+            "field": "icon_count",
+            "type": "quantitative",
+            "format": "d",
+            "title": "Koala icons"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "month_number": 1,
+            "month": "January",
+            "record_count": 4277,
+            "icon_count": 4,
+            "label_y": 4620
+          },
+          {
+            "month_number": 2,
+            "month": "February",
+            "record_count": 3309,
+            "icon_count": 3,
+            "label_y": 3620
+          },
+          {
+            "month_number": 3,
+            "month": "March",
+            "record_count": 3161,
+            "icon_count": 3,
+            "label_y": 3620
+          },
+          {
+            "month_number": 4,
+            "month": "April",
+            "record_count": 3076,
+            "icon_count": 3,
+            "label_y": 3620
+          },
+          {
+            "month_number": 5,
+            "month": "May",
+            "record_count": 3674,
+            "icon_count": 4,
+            "label_y": 4620
+          },
+          {
+            "month_number": 6,
+            "month": "June",
+            "record_count": 4053,
+            "icon_count": 4,
+            "label_y": 4620
+          },
+          {
+            "month_number": 7,
+            "month": "July",
+            "record_count": 5448,
+            "icon_count": 5,
+            "label_y": 5620
+          },
+          {
+            "month_number": 8,
+            "month": "August",
+            "record_count": 7279,
+            "icon_count": 7,
+            "label_y": 7620
+          },
+          {
+            "month_number": 9,
+            "month": "September",
+            "record_count": 7912,
+            "icon_count": 8,
+            "label_y": 8620
+          },
+          {
+            "month_number": 10,
+            "month": "October",
+            "record_count": 7485,
+            "icon_count": 7,
+            "label_y": 7620
+          },
+          {
+            "month_number": 11,
+            "month": "November",
+            "record_count": 5846,
+            "icon_count": 6,
+            "label_y": 6620
+          },
+          {
+            "month_number": 12,
+            "month": "December",
+            "record_count": 4288,
+            "icon_count": 4,
+            "label_y": 4620
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "baseline": "bottom"
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "sort": {
+            "field": "month_number",
+            "order": "ascending"
+          },
+          "axis": {
+            "title": null,
+            "labelAngle": -35
+          }
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "record_count",
+          "type": "quantitative",
+          "format": ",d"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.month == 'August' || datum.month == 'September' || datum.month == 'October'",
+            "value": "#c86f18"
+          },
+          "value": "#284b3a"
+        },
+        "tooltip": [
+          {
+            "field": "month",
+            "title": "Month"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",d",
+            "title": "Reports"
+          },
+          {
+            "field": "icon_count",
+            "type": "quantitative",
+            "format": "d",
+            "title": "Koala icons"
+          }
+        ]
+      }
+    }
+  ]
 }
