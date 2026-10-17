@@ -50,14 +50,6 @@
       "as": "cause_label"
     }
   ],
-  "mark": {
-    "type": "line",
-    "point": {
-      "filled": true,
-      "size": 35
-    },
-    "strokeWidth": 2
-  },
   "encoding": {
     "x": {
       "field": "year",
@@ -74,7 +66,8 @@
       "title": "Number of records",
       "axis": {
         "format": ",d"
-      }
+      },
+      "stack": null
     },
     "color": {
       "field": "cause_label",
@@ -103,5 +96,24 @@
         "title": "Records"
       }
     ]
-  }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.16,
+        "clip": true
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 38
+        },
+        "strokeWidth": 2.2
+      }
+    }
+  ]
 }
