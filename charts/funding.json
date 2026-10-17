@@ -1,665 +1,972 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": 610,
-  "background": "transparent",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 1120,
+  "height": 650,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 30,
+    "bottom": 5
+  },
   "autosize": {
     "type": "fit",
-    "contains": "padding"
+    "contains": "padding",
+    "resize": true
   },
-  "config": {
-    "view": {
-      "stroke": null
+  "background": "transparent",
+  "data": [
+    {
+      "name": "links",
+      "values": [
+        {
+          "path": "M87,42 C233.28,42 258.72,42 405,42 L405,318.71604185534085 C258.72,318.71604185534085 233.28,318.71604185534085 87,318.71604185534085 Z",
+          "color": "#2f7454",
+          "opacity": 0.48,
+          "programme": "Habitat restoration",
+          "project": "Recovery funding",
+          "partner": "",
+          "amount": 27500000,
+          "amount_label": "$27.5m"
+        },
+        {
+          "path": "M87,346.71604185534085 C233.28,346.71604185534085 258.72,318.71604185534085 405,318.71604185534085 L405,544.0 C258.72,544.0 233.28,572.0 87,572.0 Z",
+          "color": "#d07a16",
+          "opacity": 0.48,
+          "programme": "Health projects",
+          "project": "Recovery funding",
+          "partner": "",
+          "amount": 22388687,
+          "amount_label": "$22.39m"
+        },
+        {
+          "path": "M433,42 C590.3199999999999,42 617.6800000000001,10 775,10 L775,55.28080684905578 C617.6800000000001,55.28080684905578 590.3199999999999,87.28080684905578 433,87.28080684905578 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Clarke-Connors Range, Fitzroy Region, Central Queensland",
+          "partner": "Fitzroy Basin Association Ltd",
+          "amount": 4500000,
+          "amount_label": "$4.5m"
+        },
+        {
+          "path": "M433,87.28080684905578 C590.3199999999999,87.28080684905578 617.6800000000001,62.28080684905578 775,62.28080684905578 L775,102.53041293710535 C617.6800000000001,102.53041293710535 590.3199999999999,127.53041293710535 433,127.53041293710535 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Bring back the bush for koalas on the Mid North Coast",
+          "partner": "NSW Department of Planning and Environment",
+          "amount": 4000000,
+          "amount_label": "$4m"
+        },
+        {
+          "path": "M433,127.53041293710535 C590.3199999999999,127.53041293710535 617.6800000000001,109.53041293710535 775,109.53041293710535 L775,144.74881826414872 C617.6800000000001,144.74881826414872 590.3199999999999,162.74881826414872 433,162.74881826414872 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration in Sarina, Central Queensland coastal area",
+          "partner": "Reef Catchments",
+          "amount": 3500000,
+          "amount_label": "$3.5m"
+        },
+        {
+          "path": "M433,162.74881826414872 C590.3199999999999,162.74881826414872 617.6800000000001,151.74881826414872 775,151.74881826414872 L775,186.96722359119212 C617.6800000000001,186.96722359119212 590.3199999999999,197.96722359119212 433,197.96722359119212 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koalas Forever Northern Rivers Recovery Hub Restoration",
+          "partner": "World Wide Fund for Nature – Australia",
+          "amount": 3500000,
+          "amount_label": "$3.5m"
+        },
+        {
+          "path": "M433,197.96722359119212 C590.3199999999999,197.96722359119212 617.6800000000001,193.96722359119212 775,193.96722359119212 L775,224.15442815722932 C617.6800000000001,224.15442815722932 590.3199999999999,228.15442815722932 433,228.15442815722932 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Coffs Harbour–North Bellingen ARKS",
+          "partner": "North Coast Local Land Services",
+          "amount": 3000000,
+          "amount_label": "$3m"
+        },
+        {
+          "path": "M433,228.15442815722932 C590.3199999999999,228.15442815722932 617.6800000000001,231.1544281572293 775,231.1544281572293 L775,261.34163272326646 C617.6800000000001,261.34163272326646 590.3199999999999,258.3416327232665 433,258.3416327232665 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Southern Highlands and Southern Tablelands ARKS",
+          "partner": "South East Local Land Services",
+          "amount": 3000000,
+          "amount_label": "$3m"
+        },
+        {
+          "path": "M433,258.3416327232665 C590.3199999999999,258.3416327232665 617.6800000000001,268.34163272326646 775,268.34163272326646 L775,288.4664357672913 C617.6800000000001,288.4664357672913 590.3199999999999,278.46643576729133 433,278.46643576729133 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in Gympie, Burnett Mary",
+          "partner": "Burnett Mary Regional Group",
+          "amount": 2000000,
+          "amount_label": "$2m"
+        },
+        {
+          "path": "M433,278.46643576729133 C590.3199999999999,278.46643576729133 617.6800000000001,295.4664357672913 775,295.4664357672913 L775,315.5912388113161 C617.6800000000001,315.5912388113161 590.3199999999999,298.59123881131615 433,298.59123881131615 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in Grandchester and Flinders Peak",
+          "partner": "Healthy Land and Water Ltd",
+          "amount": 2000000,
+          "amount_label": "$2m"
+        },
+        {
+          "path": "M433,298.59123881131615 C590.3199999999999,298.59123881131615 617.6800000000001,322.5912388113161 775,322.5912388113161 L775,342.7160418553409 C617.6800000000001,342.7160418553409 590.3199999999999,318.71604185534096 433,318.71604185534096 Z",
+          "color": "#2f7454",
+          "opacity": 0.54,
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Northern Tablelands",
+          "partner": "Northern Tablelands Local Land Services",
+          "amount": 2000000,
+          "amount_label": "$2m"
+        },
+        {
+          "path": "M433,318.71604185534085 C590.3199999999999,318.71604185534085 617.6800000000001,349.7160418553409 775,349.7160418553409 L775,400.0280494654029 C617.6800000000001,400.0280494654029 590.3199999999999,369.02804946540283 433,369.02804946540283 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "RSPCA Queensland Wildlife Centre of Excellence",
+          "partner": "RSPCA Queensland",
+          "amount": 5000000,
+          "amount_label": "$5m"
+        },
+        {
+          "path": "M433,369.02804946540283 C590.3199999999999,369.02804946540283 617.6800000000001,407.0280494654029 775,407.0280494654029 L775,447.27765555345246 C617.6800000000001,447.27765555345246 590.3199999999999,409.2776555534524 433,409.2776555534524 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "Together for Koalas: Our Action, Their Future",
+          "partner": "RSPCA Queensland",
+          "amount": 4000000,
+          "amount_label": "$4m"
+        },
+        {
+          "path": "M433,409.2776555534524 C590.3199999999999,409.2776555534524 617.6800000000001,454.27765555345246 775,454.27765555345246 L775,489.49606088049586 C617.6800000000001,489.49606088049586 590.3199999999999,444.4960608804958 433,444.4960608804958 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "Australia Zoo Wildlife Hospital Upgrade Project",
+          "partner": "Australia Zoo Wildlife Hospital",
+          "amount": 3500000,
+          "amount_label": "$3.5m"
+        },
+        {
+          "path": "M433,444.4960608804958 C590.3199999999999,444.4960608804958 617.6800000000001,496.49606088049586 775,496.49606088049586 L775,526.683265446533 C617.6800000000001,526.683265446533 590.3199999999999,474.68326544653297 433,474.68326544653297 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "Port Stephens Koala Hospital Upgrade and Operational Expansion",
+          "partner": "Port Stephens Koala & Wildlife Preservation Society",
+          "amount": 3000000,
+          "amount_label": "$3m"
+        },
+        {
+          "path": "M433,474.68326544653297 C590.3199999999999,474.68326544653297 617.6800000000001,533.683265446533 775,533.683265446533 L775,563.8704700125702 C617.6800000000001,563.8704700125702 590.3199999999999,504.87047001257014 433,504.87047001257014 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "Toohey Forest Fauna Crossing",
+          "partner": "Brisbane City Council",
+          "amount": 3000000,
+          "amount_label": "$3m"
+        },
+        {
+          "path": "M433,504.87047001257014 C590.3199999999999,504.87047001257014 617.6800000000001,570.8704700125702 775,570.8704700125702 L775,594.9196096501798 C617.6800000000001,594.9196096501798 590.3199999999999,528.9196096501797 433,528.9196096501797 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "Koala Preservation through Treatment, Rehabilitation & Applied Research",
+          "partner": "Currumbin Wildlife Sanctuary",
+          "amount": 2390000,
+          "amount_label": "$2.39m"
+        },
+        {
+          "path": "M433,528.9196096501797 C590.3199999999999,528.9196096501797 617.6800000000001,601.9196096501798 775,601.9196096501798 L775,609.4632612600127 C617.6800000000001,609.4632612600127 590.3199999999999,536.4632612600126 433,536.4632612600126 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "Development of vaccine implants to protect koalas against chlamydia",
+          "partner": "Queensland University of Technology",
+          "amount": 749687,
+          "amount_label": "$750k"
+        },
+        {
+          "path": "M433,536.4632612600126 C590.3199999999999,536.4632612600126 617.6800000000001,616.4632612600127 775,616.4632612600127 L775,624.0 C617.6800000000001,624.0 590.3199999999999,543.9999999999999 433,543.9999999999999 Z",
+          "color": "#d07a16",
+          "opacity": 0.54,
+          "programme": "Health projects",
+          "project": "Developing a koala chlamydial vaccine through to product registration",
+          "partner": "University of the Sunshine Coast",
+          "amount": 749000,
+          "amount_label": "$749k"
+        }
+      ]
     },
-    "font": "Arial",
-    "axis": {
-      "labelColor": "#526158",
-      "titleColor": "#34483b",
-      "gridColor": "#e8ece5",
-      "domain": false,
-      "labelFontSize": 12
+    {
+      "name": "nodes",
+      "values": [
+        {
+          "kind": "programme",
+          "x": 65,
+          "x2": 87,
+          "y": 42,
+          "y2": 318.71604185534085,
+          "cy": 180.35802092767042,
+          "label": "Habitat restoration",
+          "sub": "9 projects · $27.5m",
+          "color": "#2f7454"
+        },
+        {
+          "kind": "programme",
+          "x": 65,
+          "x2": 87,
+          "y": 346.71604185534085,
+          "y2": 572.0,
+          "cy": 459.3580209276704,
+          "label": "Health projects",
+          "sub": "8 projects · $22.39m",
+          "color": "#d07a16"
+        },
+        {
+          "kind": "centre",
+          "x": 405,
+          "x2": 433,
+          "y": 42,
+          "y2": 544.0,
+          "cy": 293.0,
+          "label": "Koala recovery funding",
+          "sub": "17 projects · $49.89m",
+          "color": "#263f33"
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 10,
+          "y2": 55.28080684905578,
+          "cy": 32.64040342452789,
+          "label": "Clarke–Connors restoration",
+          "sub": "$4.5m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Clarke-Connors Range, Fitzroy Region, Central Queensland",
+          "partner": "Fitzroy Basin Association Ltd",
+          "amount": 4500000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 62.28080684905578,
+          "y2": 102.53041293710535,
+          "cy": 82.40560989308057,
+          "label": "Mid North Coast restoration",
+          "sub": "$4m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Bring back the bush for koalas on the Mid North Coast",
+          "partner": "NSW Department of Planning and Environment",
+          "amount": 4000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 109.53041293710535,
+          "y2": 144.74881826414872,
+          "cy": 127.13961560062705,
+          "label": "Sarina restoration",
+          "sub": "$3.5m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration in Sarina, Central Queensland coastal area",
+          "partner": "Reef Catchments",
+          "amount": 3500000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 151.74881826414872,
+          "y2": 186.96722359119212,
+          "cy": 169.35802092767042,
+          "label": "Northern Rivers recovery hub",
+          "sub": "$3.5m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koalas Forever Northern Rivers Recovery Hub Restoration",
+          "partner": "World Wide Fund for Nature – Australia",
+          "amount": 3500000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 193.96722359119212,
+          "y2": 224.15442815722932,
+          "cy": 209.0608258742107,
+          "label": "Coffs Harbour–North Bellingen",
+          "sub": "$3m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Coffs Harbour–North Bellingen ARKS",
+          "partner": "North Coast Local Land Services",
+          "amount": 3000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 231.1544281572293,
+          "y2": 261.34163272326646,
+          "cy": 246.24803044024787,
+          "label": "Southern Highlands & Tablelands",
+          "sub": "$3m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Southern Highlands and Southern Tablelands ARKS",
+          "partner": "South East Local Land Services",
+          "amount": 3000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 268.34163272326646,
+          "y2": 288.4664357672913,
+          "cy": 278.40403424527887,
+          "label": "Gympie–Burnett Mary restoration",
+          "sub": "$2m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in Gympie, Burnett Mary",
+          "partner": "Burnett Mary Regional Group",
+          "amount": 2000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 295.4664357672913,
+          "y2": 315.5912388113161,
+          "cy": 305.5288372893037,
+          "label": "Grandchester & Flinders Peak",
+          "sub": "$2m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in Grandchester and Flinders Peak",
+          "partner": "Healthy Land and Water Ltd",
+          "amount": 2000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 322.5912388113161,
+          "y2": 342.7160418553409,
+          "cy": 332.6536403333285,
+          "label": "Northern Tablelands restoration",
+          "sub": "$2m",
+          "color": "#2f7454",
+          "programme": "Habitat restoration",
+          "project": "Koala Habitat Restoration and Protection in the Northern Tablelands",
+          "partner": "Northern Tablelands Local Land Services",
+          "amount": 2000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 349.7160418553409,
+          "y2": 400.0280494654029,
+          "cy": 374.8720456603719,
+          "label": "RSPCA Wildlife Centre",
+          "sub": "$5m",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "RSPCA Queensland Wildlife Centre of Excellence",
+          "partner": "RSPCA Queensland",
+          "amount": 5000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 407.0280494654029,
+          "y2": 447.27765555345246,
+          "cy": 427.1528525094277,
+          "label": "Together for Koalas",
+          "sub": "$4m",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "Together for Koalas: Our Action, Their Future",
+          "partner": "RSPCA Queensland",
+          "amount": 4000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 454.27765555345246,
+          "y2": 489.49606088049586,
+          "cy": 471.88685821697413,
+          "label": "Australia Zoo hospital upgrade",
+          "sub": "$3.5m",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "Australia Zoo Wildlife Hospital Upgrade Project",
+          "partner": "Australia Zoo Wildlife Hospital",
+          "amount": 3500000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 496.49606088049586,
+          "y2": 526.683265446533,
+          "cy": 511.58966316351444,
+          "label": "Port Stephens Koala Hospital",
+          "sub": "$3m",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "Port Stephens Koala Hospital Upgrade and Operational Expansion",
+          "partner": "Port Stephens Koala & Wildlife Preservation Society",
+          "amount": 3000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 533.683265446533,
+          "y2": 563.8704700125702,
+          "cy": 548.7768677295517,
+          "label": "Toohey Forest fauna crossing",
+          "sub": "$3m",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "Toohey Forest Fauna Crossing",
+          "partner": "Brisbane City Council",
+          "amount": 3000000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 570.8704700125702,
+          "y2": 594.9196096501798,
+          "cy": 582.895039831375,
+          "label": "Treatment & applied research",
+          "sub": "$2.39m",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "Koala Preservation through Treatment, Rehabilitation & Applied Research",
+          "partner": "Currumbin Wildlife Sanctuary",
+          "amount": 2390000
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 601.9196096501798,
+          "y2": 609.4632612600127,
+          "cy": 605.6914354550963,
+          "label": "Vaccine implants",
+          "sub": "$750k",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "Development of vaccine implants to protect koalas against chlamydia",
+          "partner": "Queensland University of Technology",
+          "amount": 749687
+        },
+        {
+          "kind": "project",
+          "x": 775,
+          "x2": 793,
+          "y": 616.4632612600127,
+          "y2": 624.0,
+          "cy": 620.2316306300063,
+          "label": "Chlamydia vaccine",
+          "sub": "$749k",
+          "color": "#d07a16",
+          "programme": "Health projects",
+          "project": "Developing a koala chlamydial vaccine through to product registration",
+          "partner": "University of the Sunshine Coast",
+          "amount": 749000
+        }
+      ]
     },
-    "legend": {
-      "orient": "bottom",
-      "title": null
+    {
+      "name": "programmes",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.kind === 'programme'"
+        }
+      ]
+    },
+    {
+      "name": "centre",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.kind === 'centre'"
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.kind === 'project'"
+        }
+      ]
     }
-  },
-  "data": {
-    "values": [
-      {
-        "project_id": "P01",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Fitzroy Basin Association Ltd",
-        "project_title": "Koala Habitat Restoration and Protection in the Clarke-Connors Range, Fitzroy Region, Central Queensland",
-        "project_label": "Clarke-Connors restoration",
-        "funding_aud_ex_gst": 4500000,
-        "amount_label": "$4.5m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P01",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Fitzroy Basin Association Ltd",
-        "project_title": "Koala Habitat Restoration and Protection in the Clarke-Connors Range, Fitzroy Region, Central Queensland",
-        "project_label": "Clarke-Connors restoration",
-        "funding_aud_ex_gst": 4500000,
-        "amount_label": "$4.5m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 570.0
-      },
-      {
-        "project_id": "P09",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "NSW Department of Planning and Environment (DPE)",
-        "project_title": "Bring back the bush for koalas on the Mid North Coast.",
-        "project_label": "Mid North Coast restoration",
-        "funding_aud_ex_gst": 4000000,
-        "amount_label": "$4m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P09",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "NSW Department of Planning and Environment (DPE)",
-        "project_title": "Bring back the bush for koalas on the Mid North Coast.",
-        "project_label": "Mid North Coast restoration",
-        "funding_aud_ex_gst": 4000000,
-        "amount_label": "$4m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 540.0
-      },
-      {
-        "project_id": "P02",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Reef Catchments (Mackay Whitsunday Isaac) Ltd",
-        "project_title": "Koala Habitat Restoration in Sarina, Central Queensland coastal area",
-        "project_label": "Sarina restoration",
-        "funding_aud_ex_gst": 3500000,
-        "amount_label": "$3.5m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P02",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Reef Catchments (Mackay Whitsunday Isaac) Ltd",
-        "project_title": "Koala Habitat Restoration in Sarina, Central Queensland coastal area",
-        "project_label": "Sarina restoration",
-        "funding_aud_ex_gst": 3500000,
-        "amount_label": "$3.5m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 510.0
-      },
-      {
-        "project_id": "P08",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "World Wide Fund for Nature - Australia",
-        "project_title": "Koalas Forever Northern Rivers Recovery Hub Restoration",
-        "project_label": "Northern Rivers recovery hub",
-        "funding_aud_ex_gst": 3500000,
-        "amount_label": "$3.5m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P08",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "World Wide Fund for Nature - Australia",
-        "project_title": "Koalas Forever Northern Rivers Recovery Hub Restoration",
-        "project_label": "Northern Rivers recovery hub",
-        "funding_aud_ex_gst": 3500000,
-        "amount_label": "$3.5m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 480.0
-      },
-      {
-        "project_id": "P06",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "North Coast Local Land Services",
-        "project_title": "Koala Habitat Restoration and Protection in the Coffs Harbour - North Bellingen Area of Regional Koala Significance (ARKS), NSW",
-        "project_label": "Coffs Harbour\u2013North Bellingen",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P06",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "North Coast Local Land Services",
-        "project_title": "Koala Habitat Restoration and Protection in the Coffs Harbour - North Bellingen Area of Regional Koala Significance (ARKS), NSW",
-        "project_label": "Coffs Harbour\u2013North Bellingen",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 450.0
-      },
-      {
-        "project_id": "P07",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "South East Local Land Services",
-        "project_title": "Koala Habitat Restoration and Protection in the Southern Highlands and Southern Tablelands Area of Regional Koala Significance (ARKS), NSW",
-        "project_label": "Southern Highlands & Tablelands",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P07",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "South East Local Land Services",
-        "project_title": "Koala Habitat Restoration and Protection in the Southern Highlands and Southern Tablelands Area of Regional Koala Significance (ARKS), NSW",
-        "project_label": "Southern Highlands & Tablelands",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 420.0
-      },
-      {
-        "project_id": "P03",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Burnett Mary Regional Group",
-        "project_title": "Koala Habitat Restoration and Protection in Gympie, Burnett Mary.",
-        "project_label": "Gympie\u2013Burnett Mary restoration",
-        "funding_aud_ex_gst": 2000000,
-        "amount_label": "$2m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P03",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Burnett Mary Regional Group",
-        "project_title": "Koala Habitat Restoration and Protection in Gympie, Burnett Mary.",
-        "project_label": "Gympie\u2013Burnett Mary restoration",
-        "funding_aud_ex_gst": 2000000,
-        "amount_label": "$2m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 390.0
-      },
-      {
-        "project_id": "P04",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Healthy Land and Water Ltd",
-        "project_title": "Koala Habitat Restoration and Protection in Grandchester and Flinders Peak, SEQLD.",
-        "project_label": "Grandchester & Flinders Peak",
-        "funding_aud_ex_gst": 2000000,
-        "amount_label": "$2m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P04",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Healthy Land and Water Ltd",
-        "project_title": "Koala Habitat Restoration and Protection in Grandchester and Flinders Peak, SEQLD.",
-        "project_label": "Grandchester & Flinders Peak",
-        "funding_aud_ex_gst": 2000000,
-        "amount_label": "$2m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 360.0
-      },
-      {
-        "project_id": "P05",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Northern Tablelands Local Land Services",
-        "project_title": "Koala Habitat Restoration and Protection in the Northern Tablelands, NSW.",
-        "project_label": "Northern Tablelands restoration",
-        "funding_aud_ex_gst": 2000000,
-        "amount_label": "$2m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 450.0
-      },
-      {
-        "project_id": "P05",
-        "programme_category": "Large habitat restoration",
-        "delivery_partner": "Northern Tablelands Local Land Services",
-        "project_title": "Koala Habitat Restoration and Protection in the Northern Tablelands, NSW.",
-        "project_label": "Northern Tablelands restoration",
-        "funding_aud_ex_gst": 2000000,
-        "amount_label": "$2m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 330.0
-      },
-      {
-        "project_id": "P10",
-        "programme_category": "Health grants",
-        "delivery_partner": "RSPCA Qld",
-        "project_title": "RSPCA Queensland Wildlife Centre of Excellence",
-        "project_label": "RSPCA Wildlife Centre",
-        "funding_aud_ex_gst": 5000000,
-        "amount_label": "$5m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P10",
-        "programme_category": "Health grants",
-        "delivery_partner": "RSPCA Qld",
-        "project_title": "RSPCA Queensland Wildlife Centre of Excellence",
-        "project_label": "RSPCA Wildlife Centre",
-        "funding_aud_ex_gst": 5000000,
-        "amount_label": "$5m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 270.0
-      },
-      {
-        "project_id": "P11",
-        "programme_category": "Health grants",
-        "delivery_partner": "RSPCA Qld",
-        "project_title": "Together for Koalas: Our Action, Their Future",
-        "project_label": "Together for Koalas",
-        "funding_aud_ex_gst": 4000000,
-        "amount_label": "$4m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P11",
-        "programme_category": "Health grants",
-        "delivery_partner": "RSPCA Qld",
-        "project_title": "Together for Koalas: Our Action, Their Future",
-        "project_label": "Together for Koalas",
-        "funding_aud_ex_gst": 4000000,
-        "amount_label": "$4m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 237.14285714285714
-      },
-      {
-        "project_id": "P14",
-        "programme_category": "Health grants",
-        "delivery_partner": "Australia Zoo Wildlife Hospital",
-        "project_title": "Australia Zoo Wildlife Hospital Upgrade Project",
-        "project_label": "Australia Zoo hospital upgrade",
-        "funding_aud_ex_gst": 3500000,
-        "amount_label": "$3.5m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P14",
-        "programme_category": "Health grants",
-        "delivery_partner": "Australia Zoo Wildlife Hospital",
-        "project_title": "Australia Zoo Wildlife Hospital Upgrade Project",
-        "project_label": "Australia Zoo hospital upgrade",
-        "funding_aud_ex_gst": 3500000,
-        "amount_label": "$3.5m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 204.28571428571428
-      },
-      {
-        "project_id": "P12",
-        "programme_category": "Health grants",
-        "delivery_partner": "Port Stephens Koala & Wildlife Preservation Society Limited",
-        "project_title": "Port Stephens Koala Hospital (PSKH) Upgrade and Operational Expansion",
-        "project_label": "Port Stephens Koala Hospital",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P12",
-        "programme_category": "Health grants",
-        "delivery_partner": "Port Stephens Koala & Wildlife Preservation Society Limited",
-        "project_title": "Port Stephens Koala Hospital (PSKH) Upgrade and Operational Expansion",
-        "project_label": "Port Stephens Koala Hospital",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 171.42857142857144
-      },
-      {
-        "project_id": "P17",
-        "programme_category": "Health grants",
-        "delivery_partner": "Brisbane City Council",
-        "project_title": "Toohey Forest Fauna Crossing",
-        "project_label": "Toohey Forest fauna crossing",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P17",
-        "programme_category": "Health grants",
-        "delivery_partner": "Brisbane City Council",
-        "project_title": "Toohey Forest Fauna Crossing",
-        "project_label": "Toohey Forest fauna crossing",
-        "funding_aud_ex_gst": 3000000,
-        "amount_label": "$3m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 138.57142857142858
-      },
-      {
-        "project_id": "P13",
-        "programme_category": "Health grants",
-        "delivery_partner": "Currumbin Wildlife Sanctuary",
-        "project_title": "Koala Preservation through Treatment, Rehabilitation & Applied Research",
-        "project_label": "Treatment & applied research",
-        "funding_aud_ex_gst": 2390000,
-        "amount_label": "$2.39m",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P13",
-        "programme_category": "Health grants",
-        "delivery_partner": "Currumbin Wildlife Sanctuary",
-        "project_title": "Koala Preservation through Treatment, Rehabilitation & Applied Research",
-        "project_label": "Treatment & applied research",
-        "funding_aud_ex_gst": 2390000,
-        "amount_label": "$2.39m",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 105.71428571428572
-      },
-      {
-        "project_id": "P16",
-        "programme_category": "Health grants",
-        "delivery_partner": "Queensland University of Technology (QUT)",
-        "project_title": "Development of vaccine implants to protect koalas against chlamydia",
-        "project_label": "Vaccine implants",
-        "funding_aud_ex_gst": 749687,
-        "amount_label": "$750k",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P16",
-        "programme_category": "Health grants",
-        "delivery_partner": "Queensland University of Technology (QUT)",
-        "project_title": "Development of vaccine implants to protect koalas against chlamydia",
-        "project_label": "Vaccine implants",
-        "funding_aud_ex_gst": 749687,
-        "amount_label": "$750k",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 72.85714285714289
-      },
-      {
-        "project_id": "P15",
-        "programme_category": "Health grants",
-        "delivery_partner": "University of Sunshine Coast",
-        "project_title": "Developing a koala chlamydial vaccine through to product registration",
-        "project_label": "Chlamydia vaccine",
-        "funding_aud_ex_gst": 749000,
-        "amount_label": "$749k",
-        "stage": 0,
-        "stage_order": 0,
-        "position": 155.0
-      },
-      {
-        "project_id": "P15",
-        "programme_category": "Health grants",
-        "delivery_partner": "University of Sunshine Coast",
-        "project_title": "Developing a koala chlamydial vaccine through to product registration",
-        "project_label": "Chlamydia vaccine",
-        "funding_aud_ex_gst": 749000,
-        "amount_label": "$749k",
-        "stage": 1,
-        "stage_order": 1,
-        "position": 40.00000000000003
-      }
-    ]
-  },
-  "transform": [],
-  "encoding": {
-    "x": {
-      "field": "stage",
-      "type": "quantitative",
-      "scale": {
-        "domain": [
-          -0.22,
-          1.65
-        ]
-      },
-      "axis": null
-    },
-    "y": {
-      "field": "position",
-      "type": "quantitative",
-      "scale": {
-        "domain": [
-          0,
-          610
-        ]
-      },
-      "axis": null
-    },
-    "color": {
-      "field": "programme_category",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "Large habitat restoration",
-          "Health grants"
-        ],
-        "range": [
-          "#326b50",
-          "#c8791f"
-        ]
-      },
-      "legend": null
-    }
-  },
-  "layer": [
+  ],
+  "marks": [
     {
-      "mark": {
-        "type": "trail",
-        "interpolate": "basis",
-        "opacity": 0.48
+      "type": "path",
+      "from": {
+        "data": "links"
       },
-      "encoding": {
-        "detail": {
-          "field": "project_id"
-        },
-        "order": {
-          "field": "stage_order"
-        },
-        "size": {
-          "field": "funding_aud_ex_gst",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              0,
-              5000000
-            ],
-            "range": [
-              3,
-              30
-            ]
+      "encode": {
+        "enter": {
+          "path": {
+            "field": "path"
           },
-          "legend": null
-        },
-        "tooltip": [
-          {
-            "field": "project_title",
-            "title": "Project"
+          "fill": {
+            "field": "color"
           },
-          {
-            "field": "delivery_partner",
-            "title": "Partner"
+          "fillOpacity": {
+            "field": "opacity"
           },
-          {
-            "field": "funding_aud_ex_gst",
-            "type": "quantitative",
-            "format": "$,.0f",
-            "title": "Allocation"
+          "stroke": {
+            "field": "color"
           },
-          {
-            "field": "programme_category",
-            "title": "Programme"
+          "strokeOpacity": {
+            "value": 0.16
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "tooltip": {
+            "signal": "{'Programme': datum.programme, 'Project': datum.project, 'Delivery partner': datum.partner, 'Allocation': format(datum.amount, '$,.0f')}"
           }
-        ]
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.stage == 1"
-        }
-      ],
-      "mark": {
-        "type": "point",
-        "shape": "square",
-        "filled": true,
-        "size": 105,
-        "stroke": "#fffdf9",
-        "strokeWidth": 1.5
-      },
-      "encoding": {
-        "tooltip": [
-          {
-            "field": "project_title",
-            "title": "Project"
-          },
-          {
-            "field": "delivery_partner",
-            "title": "Partner"
-          },
-          {
-            "field": "funding_aud_ex_gst",
-            "type": "quantitative",
-            "format": "$,.0f",
-            "title": "Allocation"
+        },
+        "update": {
+          "fillOpacity": {
+            "field": "opacity"
           }
-        ]
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.stage == 1"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 10,
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#243f31"
-      },
-      "encoding": {
-        "text": {
-          "field": "project_label"
         },
-        "color": {
-          "value": "#243f31"
-        },
-        "tooltip": [
-          {
-            "field": "project_title",
-            "title": "Project"
-          },
-          {
-            "field": "delivery_partner",
-            "title": "Partner"
-          },
-          {
-            "field": "funding_aud_ex_gst",
-            "type": "quantitative",
-            "format": "$,.0f",
-            "title": "Allocation"
+        "hover": {
+          "fillOpacity": {
+            "value": 0.78
           }
-        ]
+        }
       }
     },
     {
-      "transform": [
-        {
-          "filter": "datum.stage == 1"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 10,
-        "dy": 13,
-        "fontSize": 10,
-        "color": "#66736b"
+      "type": "rect",
+      "from": {
+        "data": "nodes"
       },
-      "encoding": {
-        "text": {
-          "field": "amount_label"
-        },
-        "color": {
-          "value": "#66736b"
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x"
+          },
+          "x2": {
+            "field": "x2"
+          },
+          "y": {
+            "field": "y"
+          },
+          "y2": {
+            "field": "y2"
+          },
+          "fill": {
+            "field": "color"
+          },
+          "cornerRadius": {
+            "value": 2
+          },
+          "stroke": {
+            "value": "#fffdf8"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
+          "tooltip": {
+            "signal": "datum.kind === 'project' ? {'Project': datum.project, 'Delivery partner': datum.partner, 'Programme': datum.programme, 'Allocation': format(datum.amount, '$,.0f')} : {'Funding stream': datum.label, 'Summary': datum.sub}"
+          }
         }
       }
     },
     {
-      "transform": [
-        {
-          "filter": "datum.stage == 0 && (datum.project_id == 'P01' || datum.project_id == 'P10')"
-        }
-      ],
-      "mark": {
-        "type": "point",
-        "shape": "square",
-        "filled": true,
-        "size": 260,
-        "stroke": "#fffdf9",
-        "strokeWidth": 2
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.stage == 0 && (datum.project_id == 'P01' || datum.project_id == 'P10')"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -14,
-        "fontSize": 12,
-        "fontWeight": "bold",
-        "color": "#243f31"
+      "type": "text",
+      "from": {
+        "data": "programmes"
       },
-      "encoding": {
-        "text": {
-          "field": "programme_category"
-        },
-        "color": {
-          "value": "#243f31"
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x",
+            "offset": -14
+          },
+          "y": {
+            "field": "cy",
+            "offset": -7
+          },
+          "text": {
+            "field": "label"
+          },
+          "align": {
+            "value": "right"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 15
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#243f31"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "programmes"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x",
+            "offset": -14
+          },
+          "y": {
+            "field": "cy",
+            "offset": 13
+          },
+          "text": {
+            "field": "sub"
+          },
+          "align": {
+            "value": "right"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#647168"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "centre"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x",
+            "offset": -88
+          },
+          "x2": {
+            "field": "x2",
+            "offset": 88
+          },
+          "y": {
+            "field": "cy",
+            "offset": -32
+          },
+          "y2": {
+            "field": "cy",
+            "offset": 32
+          },
+          "fill": {
+            "value": "#fffdf8"
+          },
+          "fillOpacity": {
+            "value": 0.96
+          },
+          "stroke": {
+            "value": "#bcc8be"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "cornerRadius": {
+            "value": 8
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "centre"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x + datum.x2)/2"
+          },
+          "y": {
+            "field": "cy",
+            "offset": -7
+          },
+          "text": {
+            "field": "label"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 15
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#243f31"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "centre"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x + datum.x2)/2"
+          },
+          "y": {
+            "field": "cy",
+            "offset": 14
+          },
+          "text": {
+            "field": "sub"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#647168"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "projects"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x2",
+            "offset": 12
+          },
+          "y": {
+            "field": "cy",
+            "offset": -6
+          },
+          "text": {
+            "field": "label"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#243f31"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "projects"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x2",
+            "offset": 12
+          },
+          "y": {
+            "field": "cy",
+            "offset": 9
+          },
+          "text": {
+            "field": "sub"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 10.5
+          },
+          "fill": {
+            "value": "#647168"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 65
+          },
+          "y": {
+            "value": 0
+          },
+          "text": {
+            "value": "PROGRAMMES"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "letterSpacing": {
+            "value": 1.4
+          },
+          "fill": {
+            "value": "#708078"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 401
+          },
+          "y": {
+            "value": 0
+          },
+          "text": {
+            "value": "COMBINED FUND"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "letterSpacing": {
+            "value": 1.4
+          },
+          "fill": {
+            "value": "#708078"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 775
+          },
+          "y": {
+            "value": 0
+          },
+          "text": {
+            "value": "PROJECTS"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "letterSpacing": {
+            "value": 1.4
+          },
+          "fill": {
+            "value": "#708078"
+          }
         }
       }
     }
