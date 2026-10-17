@@ -22,7 +22,10 @@
         "direct_label": "Hospital\n39,548 · 66.1%",
         "label_radius": 88,
         "sort_order": 1,
-        "label_angle": 0.33143929870434624
+        "label_angle": 0.33143929870434624,
+        "line_end_radius": 68,
+        "line_angle_start": 0.32993929870434624,
+        "line_angle_end": 0.33293929870434624
       },
       {
         "adult_fate": "Left alone",
@@ -31,34 +34,46 @@
         "direct_label": "Left alone\n11,572 · 19.4%",
         "label_radius": 98,
         "sort_order": 2,
-        "label_angle": 0.7598598749601917
+        "label_angle": 0.7598598749601917,
+        "line_end_radius": 78,
+        "line_angle_start": 0.7583598749601917,
+        "line_angle_end": 0.7613598749601916
       },
       {
         "adult_fate": "Other",
         "record_count": 4211,
         "percent_of_all_records": 7.04,
         "direct_label": "Other\n4,211 · 7.0%",
-        "label_radius": 148,
+        "label_radius": 190,
         "sort_order": 3,
-        "label_angle": 0.8921322136739244
+        "label_angle": 0.8921322136739244,
+        "line_end_radius": 170,
+        "line_angle_start": 0.8906322136739244,
+        "line_angle_end": 0.8936322136739243
       },
       {
         "adult_fate": "Unable to capture",
         "record_count": 2522,
         "percent_of_all_records": 4.22,
         "direct_label": "Unable to capture\n2,522 · 4.2%",
-        "label_radius": 176,
+        "label_radius": 202,
         "sort_order": 4,
-        "label_angle": 0.9485593603861819
+        "label_angle": 0.9485593603861819,
+        "line_end_radius": 182,
+        "line_angle_start": 0.947059360386182,
+        "line_angle_end": 0.9500593603861819
       },
       {
         "adult_fate": "Relocated",
         "record_count": 1808,
         "percent_of_all_records": 3.02,
         "direct_label": "Relocated\n1,808 · 3.0%",
-        "label_radius": 205,
+        "label_radius": 235,
         "sort_order": 5,
-        "label_angle": 0.9848477229681031
+        "label_angle": 0.9848477229681031,
+        "line_end_radius": 215,
+        "line_angle_start": 0.9833477229681031,
+        "line_angle_end": 0.986347722968103
       }
     ]
   },
@@ -116,6 +131,63 @@
             "title": "Percent"
           }
         ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.record_count < 5000"
+        }
+      ],
+      "mark": {
+        "type": "arc",
+        "color": "#3f5d4e",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "radius": {
+          "value": 140
+        },
+        "radius2": {
+          "field": "line_end_radius",
+          "type": "quantitative",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "adult_fate",
+            "title": "What happened next"
+          },
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Records"
+          },
+          {
+            "field": "percent_of_all_records",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Percent"
+          }
+        ],
+        "theta": {
+          "field": "line_angle_start",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ],
+            "range": [
+              0,
+              6.283185307179586
+            ]
+          }
+        },
+        "theta2": {
+          "field": "line_angle_end"
+        }
       }
     },
     {
