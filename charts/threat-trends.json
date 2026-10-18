@@ -134,16 +134,14 @@
             "fields": [
               "year"
             ],
-            "nearest": true,
             "on": "pointerover",
             "clear": "pointerout"
           }
         }
       ],
       "mark": {
-        "type": "point",
-        "opacity": 0,
-        "size": 200
+        "type": "rect",
+        "opacity": 0
       },
       "encoding": {
         "y": {
@@ -173,7 +171,10 @@
             "format": ",",
             "title": "Fall"
           }
-        ]
+        ],
+        "y2": {
+          "datum": 620
+        }
       }
     },
     {
