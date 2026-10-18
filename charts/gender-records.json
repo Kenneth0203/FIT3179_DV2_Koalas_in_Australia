@@ -1,10 +1,69 @@
 {
-  "$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":"container","height":230,"background":"transparent","autosize":{"type":"fit","contains":"padding"},
-  "config":{"view":{"stroke":null},"font":"Arial","axis":{"labelColor":"#526158","titleColor":"#34483b","gridColor":"#e8ece5","domain":false,"labelFontSize":12}},
-  "data":{"url":"data/qld_hospital/qld_koala_hospital_gender.csv","format":{"type":"csv"}},
-  "transform":[{"joinaggregate":[{"op":"sum","field":"record_count","as":"total"}]},{"calculate":"datum.record_count / datum.total","as":"share"}],
-  "layer":[
-    {"mark":{"type":"bar","cornerRadiusEnd":5,"color":"#39765a"},"encoding":{"y":{"field":"adult_gender","type":"nominal","sort":"-x","axis":{"title":null}},"x":{"field":"record_count","type":"quantitative","axis":{"title":"Number of reports","format":"~s"}},"tooltip":[{"field":"adult_gender","title":"Recorded sex"},{"field":"record_count","type":"quantitative","format":",","title":"Reports"},{"field":"share","type":"quantitative","format":".1%","title":"Share"}]}},
-    {"mark":{"type":"text","align":"left","dx":7,"fontWeight":"bold","color":"#243e31"},"encoding":{"y":{"field":"adult_gender","type":"nominal","sort":"-x"},"x":{"field":"record_count","type":"quantitative"},"text":{"field":"share","type":"quantitative","format":".1%"}}}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 330,
+  "background": "transparent",
+  "autosize": {"type": "fit", "contains": "padding"},
+  "config": {
+    "view": {"stroke": null},
+    "font": "Arial"
+  },
+  "data": {
+    "url": "data/qld_hospital/qld_koala_hospital_gender.csv",
+    "format": {"type": "csv", "parse": {"record_count": "number"}}
+  },
+  "transform": [
+    {"joinaggregate": [{"op": "sum", "field": "record_count", "as": "total"}]},
+    {"calculate": "datum.record_count / datum.total", "as": "share"},
+    {"calculate": "datum.adult_gender + '\\n' + format(datum.share, '.1%')", "as": "direct_label"}
+  ],
+  "encoding": {
+    "theta": {"field": "record_count", "type": "quantitative", "stack": true},
+    "color": {
+      "field": "adult_gender",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": ["Male", "Female", "Not recorded", "Unknown"],
+        "range": ["#326b50", "#d08a2e", "#3c86a8", "#7a5aa6"]
+      }
+    },
+    "order": {
+      "field": "adult_gender",
+      "sort": ["Male", "Female", "Not recorded", "Unknown"]
+    },
+    "tooltip": [
+      {"field": "adult_gender", "title": "Recorded sex"},
+      {"field": "record_count", "type": "quantitative", "format": ",", "title": "Reports"},
+      {"field": "share", "type": "quantitative", "format": ".1%", "title": "Share of all reports"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "outerRadius": 145,
+        "stroke": "#fffefa",
+        "strokeWidth": 3,
+        "cornerRadius": 2
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radius": 96,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "lineBreak": "\n",
+        "lineHeight": 16,
+        "fill": "#243e31",
+        "stroke": "#fffefa",
+        "strokeWidth": 3,
+        "strokeOpacity": 0.9
+      },
+      "encoding": {
+        "text": {"field": "direct_label"}
+      }
+    }
   ]
 }
