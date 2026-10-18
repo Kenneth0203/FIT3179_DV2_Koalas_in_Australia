@@ -126,9 +126,12 @@
         "type": "text",
         "align": "left",
         "dx": 7,
-        "fontSize": 12,
+        "fontSize": 13,
         "fontWeight": "bold",
-        "color": "#243e31"
+        "color": "#fffdf8",
+        "stroke": "#243e31",
+        "strokeWidth": 1,
+        "strokeOpacity": 0.75
       },
       "encoding": {
         "longitude": {
