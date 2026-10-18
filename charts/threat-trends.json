@@ -48,6 +48,10 @@
     {
       "calculate": "datum.cause == 'vehicle_hit_count' ? 'Vehicle hit' : datum.cause == 'caused_by_dog_count' ? 'Dog attack or interaction' : 'Fall'",
       "as": "cause_label"
+    },
+    {
+      "calculate": "'Incident: ' + datum.cause_label + ' \u2013 ' + format(datum.records, ',')",
+      "as": "hover_label"
     }
   ],
   "encoding": {
@@ -101,18 +105,129 @@
     {
       "mark": {
         "type": "area",
-        "opacity": 0.16,
+        "opacity": 0.12,
         "clip": true
       }
     },
     {
       "mark": {
         "type": "line",
-        "point": {
-          "filled": true,
-          "size": 38
+        "strokeWidth": 2.4,
+        "clip": true
+      }
+    },
+    {
+      "transform": [
+        {
+          "pivot": "cause_label",
+          "value": "records",
+          "groupby": [
+            "year"
+          ]
+        }
+      ],
+      "params": [
+        {
+          "name": "year_hover",
+          "select": {
+            "type": "point",
+            "fields": [
+              "year"
+            ],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "opacity": 0,
+        "size": 200
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
         },
-        "strokeWidth": 2.2
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "Vehicle hit",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Vehicle hit"
+          },
+          {
+            "field": "Dog attack or interaction",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Dog attack or interaction"
+          },
+          {
+            "field": "Fall",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Fall"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "pivot": "cause_label",
+          "value": "records",
+          "groupby": [
+            "year"
+          ]
+        },
+        {
+          "filter": {
+            "param": "year_hover",
+            "empty": false
+          }
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#243e31",
+        "strokeWidth": 1.7,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "Vehicle hit",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Vehicle hit"
+          },
+          {
+            "field": "Dog attack or interaction",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Dog attack or interaction"
+          },
+          {
+            "field": "Fall",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Fall"
+          }
+        ]
       }
     }
   ]
