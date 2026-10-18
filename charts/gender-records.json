@@ -112,14 +112,18 @@
         "fontWeight": "bold",
         "lineBreak": "\n",
         "lineHeight": 18,
-        "fill": "#fffefa",
-        "stroke": "#243e31",
-        "strokeWidth": 1.2,
-        "strokeOpacity": 0.7
+        "fill": "#fffefa"
       },
       "encoding": {
         "text": {
           "field": "direct_label"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.adult_gender === 'Female'",
+            "value": "#243e31"
+          },
+          "value": "#fffefa"
         }
       }
     }
