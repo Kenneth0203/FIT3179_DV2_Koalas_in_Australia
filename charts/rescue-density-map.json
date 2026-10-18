@@ -50,60 +50,49 @@
     },
     {
       "data": {
-        "url": "data/qld_hospital/qld_koala_hospital_rescue_grid.csv",
+        "url": "data/qld_hospital/qld_koala_hospital_rescue_bins.geojson",
         "format": {
-          "type": "csv"
+          "type": "json",
+          "property": "features"
         }
       },
-      "transform": [
-        {
-          "filter": "datum.latitude <= -24 && datum.latitude >= -29.5"
-        }
-      ],
       "mark": {
-        "type": "square",
-        "opacity": 0.78
+        "type": "geoshape",
+        "opacity": 0.86,
+        "stroke": null
       },
       "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-        "size": {
-          "value": 55
-        },
         "color": {
-          "field": "record_count",
+          "field": "properties.record_count",
           "type": "quantitative",
-          "scale": {"type": "sqrt", "scheme": "plasma"},
+          "scale": {
+            "type": "sqrt",
+            "scheme": "plasma"
+          },
           "legend": {
-            "title": "Reports in one square",
+            "title": "Reports per 0.1\u00b0 bin",
             "labelExpr": "format(datum.value, ',')",
             "gradientLength": 260
           }
         },
         "tooltip": [
           {
-            "field": "latitude",
+            "field": "properties.latitude",
             "type": "quantitative",
             "format": ".2f",
-            "title": "Latitude"
+            "title": "Bin centre latitude"
           },
           {
-            "field": "longitude",
+            "field": "properties.longitude",
             "type": "quantitative",
             "format": ".2f",
-            "title": "Longitude"
+            "title": "Bin centre longitude"
           },
           {
-            "field": "record_count",
+            "field": "properties.record_count",
             "type": "quantitative",
             "format": ",",
-            "title": "Records"
+            "title": "Reports in bin"
           }
         ]
       }
@@ -111,10 +100,26 @@
     {
       "data": {
         "values": [
-          {"name": "Sunshine Coast", "latitude": -26.65, "longitude": 153.07},
-          {"name": "Brisbane", "latitude": -27.47, "longitude": 153.03},
-          {"name": "Gold Coast", "latitude": -28.02, "longitude": 153.4},
-          {"name": "Toowoomba", "latitude": -27.56, "longitude": 151.95}
+          {
+            "name": "Sunshine Coast",
+            "latitude": -26.65,
+            "longitude": 153.07
+          },
+          {
+            "name": "Brisbane",
+            "latitude": -27.47,
+            "longitude": 153.03
+          },
+          {
+            "name": "Gold Coast",
+            "latitude": -28.02,
+            "longitude": 153.4
+          },
+          {
+            "name": "Toowoomba",
+            "latitude": -27.56,
+            "longitude": 151.95
+          }
         ]
       },
       "mark": {
@@ -126,9 +131,17 @@
         "color": "#243e31"
       },
       "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "name"}
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name"
+        }
       }
     }
   ]
