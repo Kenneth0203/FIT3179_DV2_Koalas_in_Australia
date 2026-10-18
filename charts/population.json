@@ -1,49 +1,293 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": 190,
+  "width": 900,
+  "height": 390,
   "background": "transparent",
-  "autosize": {"type": "fit", "contains": "padding"},
-  "config": {
-    "view": {"stroke": null},
-    "font": "Arial",
-    "axis": {"labelColor": "#526158", "titleColor": "#34483b", "gridColor": "#e8ece5", "domain": false, "labelFontSize": 12}
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
   },
-  "data": {"url": "src/koala_population_estimates.csv?v=2", "format": {"type": "csv"}},
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "gridColor": "#e8ece5",
+      "domain": false,
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "legend": {
+      "labelColor": "#526158",
+      "titleColor": "#34483b",
+      "orient": "top",
+      "direction": "horizontal",
+      "symbolStrokeWidth": 5
+    }
+  },
+  "data": {
+    "url": "src/koala_population_estimates.csv?v=3",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "estimate_year": "number",
+        "lower_estimate": "number",
+        "upper_estimate": "number"
+      }
+    }
+  },
   "transform": [
-    {"filter": "datum.estimate_year == 2025 && datum.population_group != 'National'"}
+    {
+      "calculate": "(toNumber(datum.lower_estimate) + toNumber(datum.upper_estimate)) / 2",
+      "as": "midpoint"
+    },
+    {
+      "calculate": "toNumber(datum.upper_estimate) - toNumber(datum.lower_estimate)",
+      "as": "range_width"
+    },
+    {
+      "calculate": "datum.geographic_coverage + ' · ' + datum.estimate_year",
+      "as": "row_label"
+    },
+    {
+      "calculate": "format(datum.lower_estimate, ',') + '–' + format(datum.upper_estimate, ',')",
+      "as": "range_label"
+    },
+    {
+      "calculate": "'range width ' + format(datum.range_width, ',')",
+      "as": "width_label"
+    }
   ],
   "encoding": {
-    "y": {"field": "geographic_coverage", "type": "nominal", "title": null, "sort": ["QLD; NSW; ACT", "VIC; SA"]}
+    "y": {
+      "field": "row_label",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Australia · 2023",
+        "Australia · 2024",
+        "Australia · 2025",
+        "QLD; NSW; ACT · 2023",
+        "QLD; NSW; ACT · 2024",
+        "QLD; NSW; ACT · 2025",
+        "VIC; SA · 2023",
+        "VIC; SA · 2024",
+        "VIC; SA · 2025"
+      ],
+      "axis": {
+        "labelLimit": 180,
+        "labelPadding": 10
+      }
+    },
+    "color": {
+      "field": "estimate_year",
+      "type": "ordinal",
+      "title": "Published estimate",
+      "sort": [
+        2023,
+        2024,
+        2025
+      ],
+      "scale": {
+        "domain": [
+          2023,
+          2024,
+          2025
+        ],
+        "range": [
+          "#b9c8ba",
+          "#6f9b7d",
+          "#2f7454"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "columns": 3,
+        "offset": 8
+      }
+    }
   },
   "layer": [
     {
-      "mark": {"type": "rule", "strokeWidth": 5, "color": "#84a98c"},
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 9,
+        "strokeCap": "round",
+        "opacity": 0.82
+      },
       "encoding": {
-        "x": {"field": "lower_estimate", "type": "quantitative", "title": "Estimated koalas", "scale": {"domain": [270000, 600000]}, "axis": {"format": ",", "tickCount": 5}},
-        "x2": {"field": "upper_estimate"},
+        "x": {
+          "field": "lower_estimate",
+          "type": "quantitative",
+          "title": "Estimated koalas",
+          "scale": {
+            "domain": [
+              0,
+              1100000
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              200000,
+              400000,
+              600000,
+              800000,
+              1000000
+            ],
+            "labelExpr": "datum.value === 0 ? '0' : format(datum.value/1000, ',') + 'k'"
+          }
+        },
+        "x2": {
+          "field": "upper_estimate"
+        },
         "tooltip": [
-          {"field": "geographic_coverage", "title": "Region"},
-          {"field": "lower_estimate", "type": "quantitative", "format": ",", "title": "Minimum estimate"},
-          {"field": "upper_estimate", "type": "quantitative", "format": ",", "title": "Maximum estimate"}
+          {
+            "field": "geographic_coverage",
+            "title": "Coverage"
+          },
+          {
+            "field": "estimate_year",
+            "title": "Published year"
+          },
+          {
+            "field": "lower_estimate",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Lower estimate"
+          },
+          {
+            "field": "upper_estimate",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Upper estimate"
+          },
+          {
+            "field": "midpoint",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Range midpoint"
+          },
+          {
+            "field": "range_width",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Range width"
+          }
         ]
       }
     },
     {
-      "mark": {"type": "point", "filled": true, "size": 150, "color": "#326b50", "stroke": "white", "strokeWidth": 2},
-      "encoding": {"x": {"field": "lower_estimate", "type": "quantitative", "axis": null}}
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 105,
+        "stroke": "#fffefa",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "lower_estimate",
+          "type": "quantitative"
+        }
+      }
     },
     {
-      "mark": {"type": "point", "filled": true, "size": 150, "color": "#326b50", "stroke": "white", "strokeWidth": 2},
-      "encoding": {"x": {"field": "upper_estimate", "type": "quantitative", "axis": null}}
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 105,
+        "stroke": "#fffefa",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "upper_estimate",
+          "type": "quantitative"
+        }
+      }
     },
     {
-      "mark": {"type": "text", "align": "right", "dx": -9, "dy": -16, "fontSize": 12, "fontWeight": "bold", "color": "#34483b"},
-      "encoding": {"x": {"field": "lower_estimate", "type": "quantitative", "axis": null}, "text": {"field": "lower_estimate", "type": "quantitative", "format": ","}}
+      "mark": {
+        "type": "point",
+        "shape": "diamond",
+        "filled": true,
+        "size": 135,
+        "stroke": "#fffefa",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "midpoint",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "geographic_coverage",
+            "title": "Coverage"
+          },
+          {
+            "field": "estimate_year",
+            "title": "Published year"
+          },
+          {
+            "field": "midpoint",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Visual midpoint"
+          }
+        ]
+      }
     },
     {
-      "mark": {"type": "text", "align": "left", "dx": 9, "dy": -16, "fontSize": 12, "fontWeight": "bold", "color": "#34483b"},
-      "encoding": {"x": {"field": "upper_estimate", "type": "quantitative", "axis": null}, "text": {"field": "upper_estimate", "type": "quantitative", "format": ","}}
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "dy": -9,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#34483b"
+      },
+      "encoding": {
+        "x": {
+          "field": "upper_estimate",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "range_label"
+        },
+        "color": {
+          "value": "#34483b"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "dy": 8,
+        "fontSize": 10,
+        "color": "#6b756b"
+      },
+      "encoding": {
+        "x": {
+          "field": "upper_estimate",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "width_label"
+        },
+        "color": {
+          "value": "#6b756b"
+        }
+      }
     }
   ]
 }
