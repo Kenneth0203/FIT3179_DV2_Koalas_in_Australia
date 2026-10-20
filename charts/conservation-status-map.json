@@ -147,28 +147,28 @@
             "longitude": 135.3,
             "latitude": -30.4,
             "status_group": "Other koala range",
-            "estimate_label": "303k\u2013381k\u2020"
+            "estimate_label": "303,000\u2013381,000"
           },
           {
             "state_code": "QLD",
             "longitude": 144.2,
             "latitude": -22.8,
             "status_group": "Nationally endangered",
-            "estimate_label": "398k\u2013569k*"
+            "estimate_label": "398,000\u2013569,000"
           },
           {
             "state_code": "NSW",
             "longitude": 147.0,
             "latitude": -32.3,
             "status_group": "Nationally endangered",
-            "estimate_label": "398k\u2013569k*"
+            "estimate_label": "398,000\u2013569,000"
           },
           {
             "state_code": "VIC",
             "longitude": 144.1,
             "latitude": -37.1,
             "status_group": "Other koala range",
-            "estimate_label": "303k\u2013381k\u2020"
+            "estimate_label": "303,000\u2013381,000"
           },
           {
             "state_code": "TAS",
@@ -182,7 +182,7 @@
             "longitude": 149.1,
             "latitude": -35.3,
             "status_group": "Nationally endangered",
-            "estimate_label": "*"
+            "estimate_label": "398,000\u2013569,000"
           }
         ]
       },
@@ -215,69 +215,67 @@
           {
             "state_code": "WA",
             "longitude": 121.5,
-            "latitude": -25.5,
+            "latitude": -26.3,
             "status_group": "Outside mapped koala range",
             "estimate_label": "No estimate"
           },
           {
             "state_code": "NT",
             "longitude": 133.3,
-            "latitude": -20.2,
+            "latitude": -21.0,
             "status_group": "Outside mapped koala range",
             "estimate_label": "No estimate"
           },
           {
             "state_code": "SA",
             "longitude": 135.3,
-            "latitude": -30.4,
+            "latitude": -31.2,
             "status_group": "Other koala range",
-            "estimate_label": "303k\u2013381k\u2020"
+            "estimate_label": "303,000\u2013381,000"
           },
           {
             "state_code": "QLD",
             "longitude": 144.2,
-            "latitude": -22.8,
+            "latitude": -23.6,
             "status_group": "Nationally endangered",
-            "estimate_label": "398k\u2013569k*"
+            "estimate_label": "398,000\u2013569,000"
           },
           {
             "state_code": "NSW",
-            "longitude": 147.0,
-            "latitude": -32.3,
+            "longitude": 146.8,
+            "latitude": -33.1,
             "status_group": "Nationally endangered",
-            "estimate_label": "398k\u2013569k*"
+            "estimate_label": "398,000\u2013569,000"
           },
           {
             "state_code": "VIC",
-            "longitude": 144.1,
-            "latitude": -37.1,
+            "longitude": 143.4,
+            "latitude": -38.0,
             "status_group": "Other koala range",
-            "estimate_label": "303k\u2013381k\u2020"
+            "estimate_label": "303,000\u2013381,000"
           },
           {
             "state_code": "TAS",
             "longitude": 146.7,
-            "latitude": -42.2,
+            "latitude": -43.0,
             "status_group": "Outside mapped koala range",
             "estimate_label": "No estimate"
           },
           {
             "state_code": "ACT",
-            "longitude": 149.1,
-            "latitude": -35.3,
+            "longitude": 151.2,
+            "latitude": -35.4,
             "status_group": "Nationally endangered",
-            "estimate_label": "*"
+            "estimate_label": "398,000\u2013569,000"
           }
         ]
       },
       "mark": {
         "type": "text",
-        "fontSize": 11,
+        "fontSize": 13,
         "fontWeight": "bold",
-        "dy": 10,
-        "color": "#243e31",
-        "stroke": "#fffefa",
-        "strokeWidth": 1.1
+        "dy": 0,
+        "color": "#17251e"
       },
       "encoding": {
         "longitude": {

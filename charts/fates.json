@@ -1,11 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 390,
+  "height": 440,
   "background": "transparent",
   "autosize": {
     "type": "fit",
     "contains": "padding"
+  },
+  "padding": {
+    "top": 34,
+    "right": 6,
+    "bottom": 6,
+    "left": 6
   },
   "config": {
     "view": {
@@ -19,7 +25,7 @@
         "adult_fate": "Hospital",
         "record_count": 39548,
         "percent_of_all_records": 66.12,
-        "direct_label": "Hospital\n39,548 · 66.1%",
+        "direct_label": "Hospital\n39,548 \u00b7 66.1%",
         "label_radius": 88,
         "sort_order": 1,
         "label_angle": 0.33143929870434624,
@@ -31,7 +37,7 @@
         "adult_fate": "Left alone",
         "record_count": 11572,
         "percent_of_all_records": 19.35,
-        "direct_label": "Left alone\n11,572 · 19.4%",
+        "direct_label": "Left alone\n11,572 \u00b7 19.4%",
         "label_radius": 98,
         "sort_order": 2,
         "label_angle": 0.7598598749601917,
@@ -43,7 +49,7 @@
         "adult_fate": "Other",
         "record_count": 4211,
         "percent_of_all_records": 7.04,
-        "direct_label": "Other\n4,211 · 7.0%",
+        "direct_label": "Other\n4,211 \u00b7 7.0%",
         "label_radius": 190,
         "sort_order": 3,
         "label_angle": 0.8921322136739244,
@@ -55,7 +61,7 @@
         "adult_fate": "Unable to capture",
         "record_count": 2522,
         "percent_of_all_records": 4.22,
-        "direct_label": "Unable to capture\n2,522 · 4.2%",
+        "direct_label": "Unable to capture\n2,522 \u00b7 4.2%",
         "label_radius": 202,
         "sort_order": 4,
         "label_angle": 0.9485593603861819,
@@ -67,11 +73,11 @@
         "adult_fate": "Relocated",
         "record_count": 1808,
         "percent_of_all_records": 3.02,
-        "direct_label": "Relocated\n1,808 · 3.0%",
-        "label_radius": 235,
+        "direct_label": "Relocated\n1,808 \u00b7 3.0%",
+        "label_radius": 42,
         "sort_order": 5,
         "label_angle": 0.9848477229681031,
-        "line_end_radius": 215,
+        "line_end_radius": 58,
         "line_angle_start": 0.9833477229681031,
         "line_angle_end": 0.986347722968103
       }
