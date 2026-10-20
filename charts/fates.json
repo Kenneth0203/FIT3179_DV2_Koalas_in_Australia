@@ -137,7 +137,7 @@
     {
       "transform": [
         {
-          "filter": "datum.record_count < 5000"
+          "filter": "datum.record_count < 5000 && datum.adult_fate != 'Relocated'"
         }
       ],
       "mark": {
@@ -190,6 +190,86 @@
         },
         "theta2": {
           "field": "line_angle_end"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "a1": 0.984847722968103,
+            "a2": 1.04
+          }
+        ]
+      },
+      "mark": {
+        "type": "arc",
+        "color": "#3f5d4e",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "radius": {
+          "value": 166
+        },
+        "radius2": {
+          "value": 163
+        },
+        "theta": {
+          "field": "a1",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1.08
+            ],
+            "range": [
+              0,
+              6.785840131753954
+            ]
+          }
+        },
+        "theta2": {
+          "field": "a2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "a1": 0.0385,
+            "a2": 0.0415
+          }
+        ]
+      },
+      "mark": {
+        "type": "arc",
+        "color": "#3f5d4e",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "radius": {
+          "value": 180
+        },
+        "radius2": {
+          "value": 163
+        },
+        "theta": {
+          "field": "a1",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ],
+            "range": [
+              0,
+              6.283185307179586
+            ]
+          }
+        },
+        "theta2": {
+          "field": "a2"
         }
       }
     },
