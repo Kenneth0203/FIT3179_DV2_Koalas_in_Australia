@@ -25,7 +25,8 @@
         "label_angle": 0.33143929870434624,
         "line_end_radius": 68,
         "line_angle_start": 0.32993929870434624,
-        "line_angle_end": 0.33293929870434624
+        "line_angle_end": 0.33293929870434624,
+        "line_start_radius": 140
       },
       {
         "adult_fate": "Left alone",
@@ -37,7 +38,8 @@
         "label_angle": 0.7598598749601917,
         "line_end_radius": 78,
         "line_angle_start": 0.7583598749601917,
-        "line_angle_end": 0.7613598749601916
+        "line_angle_end": 0.7613598749601916,
+        "line_start_radius": 140
       },
       {
         "adult_fate": "Other",
@@ -49,7 +51,8 @@
         "label_angle": 0.8921322136739244,
         "line_end_radius": 170,
         "line_angle_start": 0.8906322136739244,
-        "line_angle_end": 0.8936322136739243
+        "line_angle_end": 0.8936322136739243,
+        "line_start_radius": 140
       },
       {
         "adult_fate": "Unable to capture",
@@ -61,7 +64,8 @@
         "label_angle": 0.9485593603861819,
         "line_end_radius": 182,
         "line_angle_start": 0.947059360386182,
-        "line_angle_end": 0.9500593603861819
+        "line_angle_end": 0.9500593603861819,
+        "line_start_radius": 140
       },
       {
         "adult_fate": "Relocated",
@@ -73,7 +77,8 @@
         "label_angle": 0.04,
         "line_end_radius": 170,
         "line_angle_start": 0.983347722968103,
-        "line_angle_end": 0.986347722968103
+        "line_angle_end": 0.986347722968103,
+        "line_start_radius": 134
       }
     ]
   },
@@ -142,7 +147,9 @@
       },
       "encoding": {
         "radius": {
-          "value": 140
+          "field": "line_start_radius",
+          "type": "quantitative",
+          "scale": null
         },
         "radius2": {
           "field": "line_end_radius",
