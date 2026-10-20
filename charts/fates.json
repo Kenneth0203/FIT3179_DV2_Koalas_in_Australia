@@ -93,24 +93,9 @@
           "stack": true
         },
         "color": {
-          "field": "adult_fate",
+          "field": "outcome_color",
           "type": "nominal",
-          "scale": {
-            "domain": [
-              "Hospital",
-              "Left alone",
-              "Other",
-              "Unable to capture",
-              "Relocated"
-            ],
-            "range": [
-              "#2F7D4A",
-              "#E0A126",
-              "#D95F59",
-              "#7A5AA6",
-              "#238E9F"
-            ]
-          },
+          "scale": null,
           "legend": null
         },
         "tooltip": [
@@ -130,8 +115,19 @@
             "format": ".1f",
             "title": "Percent"
           }
-        ]
-      }
+        ],
+        "order": {
+          "field": "sort_order",
+          "type": "ordinal",
+          "sort": "ascending"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.adult_fate === 'Hospital' ? '#2F7D4A' : datum.adult_fate === 'Left alone' ? '#E0A126' : datum.adult_fate === 'Other' ? '#D95F59' : datum.adult_fate === 'Unable to capture' ? '#7A5AA6' : '#238E9F'",
+          "as": "outcome_color"
+        }
+      ]
     },
     {
       "transform": [
