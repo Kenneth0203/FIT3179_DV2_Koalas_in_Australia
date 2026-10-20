@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "background": "transparent",
+  "autosize": {"type": "fit", "contains": "padding"},
+  "projection": {"type": "mercator", "center": [134.5, -27.5], "scale": 710},
+  "config": {
+    "view": {"stroke": null},
+    "font": "Arial",
+    "legend": {
+      "orient": "bottom",
+      "title": null,
+      "labelColor": "#526158",
+      "labelFontSize": 12,
+      "symbolStrokeColor": "#fffefa",
+      "symbolStrokeWidth": 1
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/maps/australian-states.geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.STATE_NAME",
+          "from": {
+            "data": {"url": "data/koala_epbc_status_by_state.csv"},
+            "key": "state_name",
+            "fields": ["state_code", "koala_range", "epbc_status", "status_group", "listing_effective", "note"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "#fffefa", "strokeWidth": 1.8},
+      "encoding": {
+        "color": {
+          "field": "status_group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Nationally endangered", "Other koala range", "Outside mapped koala range"],
+            "range": ["#d55e42", "#6f9f75", "#dfe4dc"]
+          },
+          "legend": {"title": "National listing coverage", "direction": "horizontal", "columns": 3}
+        },
+        "tooltip": [
+          {"field": "properties.STATE_NAME", "title": "State or territory"},
+          {"field": "koala_range", "title": "Koala range"},
+          {"field": "epbc_status", "title": "National status"},
+          {"field": "listing_effective", "title": "Listing effective"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"state_code": "WA", "longitude": 121.5, "latitude": -25.5, "status_group": "Outside mapped koala range"},
+          {"state_code": "NT", "longitude": 133.3, "latitude": -20.2, "status_group": "Outside mapped koala range"},
+          {"state_code": "SA", "longitude": 135.3, "latitude": -30.4, "status_group": "Other koala range"},
+          {"state_code": "QLD", "longitude": 144.2, "latitude": -22.8, "status_group": "Nationally endangered"},
+          {"state_code": "NSW", "longitude": 147.0, "latitude": -32.3, "status_group": "Nationally endangered"},
+          {"state_code": "VIC", "longitude": 144.1, "latitude": -37.1, "status_group": "Other koala range"},
+          {"state_code": "TAS", "longitude": 146.7, "latitude": -42.2, "status_group": "Outside mapped koala range"},
+          {"state_code": "ACT", "longitude": 149.1, "latitude": -35.3, "status_group": "Nationally endangered"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "color": "#243e31",
+        "stroke": "#fffefa",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "state_code"}
+      }
+    }
+  ]
+}
