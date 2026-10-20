@@ -107,8 +107,8 @@
               "#2F7D4A",
               "#E0A126",
               "#D95F59",
-              "#7A5AA6",
-              "#238E9F"
+              "#238E9F",
+              "#7A5AA6"
             ]
           },
           "legend": null
@@ -187,6 +187,55 @@
         },
         "theta2": {
           "field": "line_angle_end"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0.505,
+            "y": 0.845,
+            "order": 1
+          },
+          {
+            "x": 0.705,
+            "y": 0.775,
+            "order": 2
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "color": "#3f5d4e",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": null
+        },
+        "order": {
+          "field": "order",
+          "type": "ordinal"
         }
       }
     },
