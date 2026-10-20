@@ -190,9 +190,9 @@
         "type": "text",
         "fontSize": 14,
         "fontWeight": "bold",
-        "color": "#243e31",
-        "stroke": "#fffefa",
-        "strokeWidth": 1.25,
+        "color": "#fffefa",
+        "stroke": "#17251e",
+        "strokeWidth": 1.4,
         "dy": -7
       },
       "encoding": {
@@ -277,7 +277,7 @@
         "dy": 10,
         "color": "#243e31",
         "stroke": "#fffefa",
-        "strokeWidth": 1.25
+        "strokeWidth": 1.1
       },
       "encoding": {
         "longitude": {
