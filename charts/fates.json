@@ -68,11 +68,11 @@
         "record_count": 1808,
         "percent_of_all_records": 3.02,
         "direct_label": "Relocated\n1,808 \u00b7 3.0%",
-        "label_radius": 170,
+        "label_radius": 190,
         "sort_order": 5,
-        "label_angle": 0.15,
-        "line_end_radius": 160,
-        "line_angle_start": 0.9833477229681031,
+        "label_angle": 0.04,
+        "line_end_radius": 170,
+        "line_angle_start": 0.983347722968103,
         "line_angle_end": 0.986347722968103
       }
     ]
@@ -132,7 +132,7 @@
     {
       "transform": [
         {
-          "filter": "datum.record_count < 5000 && datum.adult_fate != 'Relocated'"
+          "filter": "datum.record_count < 5000"
         }
       ],
       "mark": {
